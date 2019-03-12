@@ -1,4 +1,19 @@
-﻿//шапка
+﻿function is_mobile(){
+  return $(window).width()<992;
+}
+//основная функция для манипуляций с DOM
+function changeTemplate(){
+  if(is_mobile()){
+    $(window).off('load scroll',changeHeader);
+    $('.header').removeClass('fixed');
+  }else{
+    $(window).on('load scroll',changeHeader);
+  }
+}
+$(document).ready(changeTemplate);
+$(window).resize(changeTemplate);
+
+//шапка
 function changeHeader(){
   if($(window).scrollTop()){
     $('.header').addClass('fixed');
@@ -6,7 +21,6 @@ function changeHeader(){
     $('.header').removeClass('fixed');
   }
 }
-$(window).on('load scroll',changeHeader);
 
 $('.header__menu-btn').click(function(){
   $(this).toggleClass('active');

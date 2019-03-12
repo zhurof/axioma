@@ -388,8 +388,8 @@ h6{}
   &.fixed &__logo{
     display:none;
   }
-  &.fixed &__icon{
-    display:inline-block;
+   &__icon{
+    display:none;
     width:146px;
     height:76px;
     padding:20px 0;
@@ -400,7 +400,11 @@ h6{}
       margin:0 auto;
     }
   }
+  &.fixed &__icon{
+    display:inline-block;
+  }
   &__menu-btn{
+    display:none;
     width:77px;
     background-color:#9ba5aa;
     color:#fff;
