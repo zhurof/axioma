@@ -204,14 +204,14 @@
       </div>
     </div>
     <?php	include "booking.php";?>
-    <div class="contacts">
-      <div id="map" class="contacts__map"></div>
+    <div class="contacts">      
       <div class="contacts__text">
         <h2 class="contacts__title">Наши контакты</h2>
         <p><span id="address">195297, Россия г. Санкт-Петербург ул. Гагаринская 30</span></p>
         <p><a href="tel:78122722125">+7 (812) 272-21-25</a> <br><a href="tel:79214019966">+7 (921) 401-99-66</a></p>
         <p>Пн - Сб / 10:00 - 21:00 <br>Вс / 10:00 - 19:00</p>
       </div>
+      <div id="map" class="contacts__map"></div>
     </div>
 	</main>
 <?php	include "footer.php";?>	

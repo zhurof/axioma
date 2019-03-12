@@ -53,13 +53,213 @@
 	.wrapper{
 		max-width:992px;
 	}
+  .header{
+    display:none;
+  }
+  .top-block{
+    &__slide{
+      padding:300px 0 150px;
+    }
+    &__dots{
+      padding:0 ~"calc(50% - 481px)";
+    }
+  }
+  .services{
+    background-position:75% center;
+  }
+  .advantages{
+    background-position:10% center;
+  }
+  .employees{
+    &__slider{
+      padding:0 60px;
+    }
+    &__arrow{
+      &_prev{
+        left:-10px;
+      }
+      &_next{
+        right:-10px;
+      }
+    }
+  }
 }
 @media(max-width:991px){
-	
+  .box{
+    justify-content:center;
+  }
+	.top-block{
+    &__slide{
+      padding:270px 0 120px;
+    }
+    &__dots{
+      padding:0 15px;
+      bottom:40px;
+    }
+  }
+  .about{
+    padding:45px 0;
+    &__wrapper{
+      display:block;
+    }
+    &__head{
+      width:auto;
+      text-align:center;
+      margin:0 0 30px;
+    }
+    &__body{
+      width:auto;
+      padding:0;
+    }
+  }
+  .services{
+    background-image:none;
+    text-align:center;
+    padding:45px 0;
+    &__box{
+      margin:0 auto;
+    }
+    &__link{
+      width:120px;
+      flex:0 1 auto;
+      margin:0 20px 50px;
+    }
+  }
+  .advantages{
+    text-align:center;
+    padding:45px 0;
+    background-image:none;
+    &__box{
+      margin:0 auto;
+      justify-content:space-between;
+    }
+    &__item{
+      text-align:left;
+    }
+  }
+  .employees{
+    padding:45px 0;
+    &__slide{
+      padding:28px 18px 26px;
+    }
+  }
+  .booking{
+    text-align:center;
+    padding:45px 0;
+    &__form{
+      display:block;
+      max-width:260px;
+      margin:0 auto 30px;
+      input{
+        display:block;
+        width:100%;
+        margin:0 0 12px;
+      }
+    }
+    &__btn{
+      display:block;
+      width:100%;
+    }
+  }
+  .contacts{
+    padding:0;
+    &__text{
+      margin:0;
+      width:auto;
+    }
+    &__map{
+      position:static;
+      height:350px;
+    }
+  }
+  .footer{
+    padding:45px 0;
+  }
 }
 @media(max-width:767px){
-	
+	.top-block{
+    text-align:center;
+    &__content{
+      max-width:100%;
+    }
+  }
+  .employees{
+    &__slider{
+      max-width:290px;
+      margin:0 auto;
+      padding:0 40px;
+    }
+  }
+  .reviews{
+    &__box{
+      padding:0;
+    }
+  }
+  .contacts{
+    &__text{
+      padding:30px 15px;
+    }
+  }
+  .footer{
+    padding:25px 0;
+    &__wrapper{
+      display:block;
+    }
+    &__main{
+      width:auto;
+      margin:0 0 20px;
+    }
+    &__nav,
+    &__contacts{
+      display:none;
+    }
+    &__info{
+      width:auto;
+    }
+    &__payment{
+      text-align:center;
+    }
+    &__policy{
+      text-align:center;
+      max-width:290px;
+      margin:0 auto 2em;
+      a{
+        display:block;
+        margin:0 0 1em;
+      }
+    }
+    &__author{
+      text-align:center;
+    }
+  }
 }
 @media(max-width:480px){
-	
+  h2{
+    font-size:24px;
+  }
+  .top-block{
+    &__title{
+      font-size:32px;
+    }
+  }
+  .services{
+    &__box{
+      margin:0 -15px;
+    }
+    &__link{
+      margin:0 15px 30px;
+    }
+  }
+	.advantages{
+    &__box{
+      display:block;
+    }
+    &__item{
+      width:auto;
+      margin:0 0 30px;
+      &:nth-last-child(-n+2){
+        margin:0 0 30px;
+      }
+    }
+  }
 }

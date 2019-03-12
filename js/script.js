@@ -12,6 +12,19 @@ $('.header__menu-btn').click(function(){
   $(this).toggleClass('active');
   $('.header__bottomline').toggleClass('open');
 })
+$('.header__search-btn').click(function(){
+  $('.header__menu-btn').removeClass('active');
+  $('.header__bottomline').removeClass('open');  
+  if(!$(this).is('.active')){
+    $(this).addClass('active');
+    $('.header__mobile-search').addClass('open');
+    $('.header__mobile-search input').focus();
+  }
+})
+$('.header__mobile-search input').blur(function(){
+  $('.header__search-btn').removeClass('active');
+  $('.header__mobile-search').removeClass('open');
+})
 $('.lang__title').click(function(){
   $(this).siblings('.lang__list').slideToggle(200);
 })
@@ -35,7 +48,20 @@ $('.top-block__slider').slick({
 $('.employees__slider').slick({
   slidesToShow:4,
   prevArrow:'<span class="employees__arrow employees__arrow_prev"></span>',
-  nextArrow:'<span class="employees__arrow employees__arrow_next"></span>'
+  nextArrow:'<span class="employees__arrow employees__arrow_next"></span>',
+  responsive:[
+    {
+      breakpoint:992,
+      settings:{
+        slidesToShow:3
+      }
+    },{
+      breakpoint:768,
+      settings:{
+        slidesToShow:1
+      }
+    }
+  ]
 })
 
 //Карта

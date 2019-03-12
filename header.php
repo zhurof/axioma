@@ -59,6 +59,9 @@
           </div>
           <span class="header__search-btn"></span>
           <a href="#/" class="btn header__btn">Запись на прием</a>
+          <form class="header__mobile-search">
+            <input type="search" />
+          </form>
         </div>
       </div>
     </div>

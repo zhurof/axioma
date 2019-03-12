@@ -345,7 +345,7 @@ h6{}
   }
   &__callback{
     text-decoration:underline;
-  }
+  }  
   &__menu{
     .unlist();
     display:flex;
@@ -383,6 +383,7 @@ h6{}
     background-color:#f2f2f2;
     border-radius:10px 10px 0 0;
     padding:0 65px 0 0;
+    position:relative;
   }
   &.fixed &__logo{
     display:none;
@@ -447,9 +448,44 @@ h6{}
     &:before{
       content:'\f002';
     }
+    &.active{
+      color:@orange;
+      pointer-events:none;
+    }
   }
   &.fixed &__search-btn{
     display:inline-block;
+  }
+  &__mobile-search{
+    display:none;
+    position:absolute;
+    top:0;
+    opacity:0;
+    left:0;
+    width:100%;
+    text-align:center;
+    pointer-events:none;
+    z-index:-1;
+    transition:all .2s ease;
+    padding:10px 30px;
+    background-color:#f5f5f5;
+    border-radius:0 0 10px 10px;
+    box-shadow: 0px 52px 85px 0px rgba(0, 0, 0, 0.09);
+    input{
+      display:block;
+      width:100%;
+      background:none;
+      padding:8px 0;
+      border:none;
+    }
+    &.open{
+      top:100%;
+      opacity:1;
+      pointer-events:all;
+    }
+  }
+  &.fixed &__mobile-search{
+    display:block;    
   }
   &.fixed &__bottomline{
     background:none;
@@ -792,6 +828,8 @@ h6{}
   padding:95px 0 120px;
   &__wrapper{
     max-width:1010px;
+    position:relative;
+    z-index:1;
   }
   &__title{
     text-align:center;
