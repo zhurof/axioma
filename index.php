@@ -148,7 +148,7 @@
         <h2 class="reviews__title">Последние отзывы</h2>
         <div class="box reviews__box">
           <div class="review-card">
-            <div class="review-card__text">Зная эту клинику, езжу с другого конца города. У меня воспалился корень зуба. Появилась серьезная опухоль. Зуб болел невыносимо... <br>У доктора золотые руки. Все закончилось хорошо. Всем рекомендую</div>
+            <div class="review-card__text"><p>Зная эту клинику, езжу с другого конца города. У меня воспалился корень зуба. Появилась серьезная опухоль. Зуб болел невыносимо... <br>У доктора золотые руки. Все закончилось хорошо. Всем рекомендую</p></div>
             <div class="review-card__head">
               <div class="review-card__pic"></div>
               <div class="review-card__info">
@@ -161,7 +161,7 @@
             </div>
           </div>
           <div class="review-card">
-            <div class="review-card__text">Я нашла эту клинику по совету друга. Он сказал, что здесь работают люди, которым можно доверять. Впервые чувствовала себя удобно в стоматологическом кресле           Спасибо!</div>
+            <div class="review-card__text"><p>Я нашла эту клинику по совету друга. Он сказал, что здесь работают люди, которым можно доверять. Впервые чувствовала себя удобно в стоматологическом кресле           Спасибо!</p></div>
             <div class="review-card__head">
               <div class="review-card__pic female"></div>
               <div class="review-card__info">
@@ -174,7 +174,7 @@
             </div>
           </div>
           <div class="review-card">
-            <div class="review-card__text">Хочется поблагодарить вашу клинику, а особенно хочется поблагодарить нашего лечащего врача <u>Амириди Марину</u> Владимировну!!!</div>
+            <div class="review-card__text"><p>Хочется поблагодарить вашу клинику, а особенно хочется поблагодарить нашего лечащего врача <u>Амириди Марину</u> Владимировну!!!</p></div>
             <div class="review-card__head">
               <div class="review-card__pic"></div>
               <div class="review-card__info">
@@ -187,7 +187,7 @@
             </div>
           </div>
           <div class="review-card">
-            <div class="review-card__text">Моя семья и я посещаем доктора <u>Ковалева</u> вот уже пять лет. Я могу оставить о нем и его персонале этой стоматологии только хорошие отзывы. Они делают отличную работу и цены вполне адекватны. Спасибо!</div>
+            <div class="review-card__text"><p>Моя семья и я посещаем доктора <u>Ковалева</u> вот уже пять лет. Я могу оставить о нем и его персонале этой стоматологии только хорошие отзывы. Они делают отличную работу и цены вполне адекватны. Спасибо!</p></div>
             <div class="review-card__head">
               <div class="review-card__pic"></div>
               <div class="review-card__info">
@@ -201,6 +201,16 @@
           </div>
         </div>
         <div class="reviews__footer"><a href="#/" class="btn">Все отзывы</a></div>
+      </div>
+    </div>
+    <?php	include "booking.php";?>
+    <div class="contacts">
+      <div id="map" class="contacts__map"></div>
+      <div class="contacts__text">
+        <h2 class="contacts__title">Наши контакты</h2>
+        <p><span id="address">195297, Россия г. Санкт-Петербург ул. Гагаринская 30</span></p>
+        <p><a href="tel:78122722125">+7 (812) 272-21-25</a> <br><a href="tel:79214019966">+7 (921) 401-99-66</a></p>
+        <p>Пн - Сб / 10:00 - 21:00 <br>Вс / 10:00 - 19:00</p>
       </div>
     </div>
 	</main>

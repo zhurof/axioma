@@ -14,6 +14,10 @@
   width:100%;
   height:100%;  
 }
+.obj(){
+  object-fit:cover;
+  object-position:center;
+}
 html{
 	box-sizing:border-box;
 }
@@ -96,8 +100,10 @@ input::-webkit-inner-spin-button {
 [type=password],
 textarea{
   line-height:1;
-  border:1px solid #c4c4c4;
-  padding:15px 21px;
+  border:2px solid #c4c4c4;
+  padding:11px 20px;
+  letter-spacing:-0.015em;
+  background-color:#fff;
   &:focus{
     border-color:@orange;
   }
@@ -130,6 +136,7 @@ button,
   overflow:hidden;
   text-overflow:ellipsis;
   background-color:@orange;
+  border:none;
   border-radius:10px;
   text-align:center;
   user-select:none;
@@ -265,7 +272,7 @@ h6{}
   &__topline{
     padding:32px 0 25px;
     border-bottom:2px solid rgba(255,255,255,.2);
-    .wrapper{
+    &-inner{
       display:flex;
       align-items:center;
       
@@ -285,7 +292,7 @@ h6{}
   }
   &__midline{
     padding:36px 0 38px;
-    .wrapper{
+    &-inner{
       display:flex;
       align-items:center;
     }
@@ -293,6 +300,11 @@ h6{}
   &__logo{
     width:145px;
     margin:0 43px 0 0;
+  }
+  &__icon,
+  &__menu-btn,
+  &__search-btn{
+    display:none;
   }
   &__worktime{
     padding:0 0 0 34px;
@@ -353,6 +365,116 @@ h6{}
         display:block;
         width:100%;
         padding:1.8em .9em;
+      }
+    }
+  }
+  &.fixed{
+    position:fixed;
+    color:#000;
+  }
+  &.fixed &__topline{
+    display:none;
+  }
+  &.fixed &__midline{
+    padding:0;
+  }
+  &.fixed &__midline-inner{
+    box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.15);
+    background-color:#f2f2f2;
+    border-radius:10px 10px 0 0;
+    padding:0 65px 0 0;
+  }
+  &.fixed &__logo{
+    display:none;
+  }
+  &.fixed &__icon{
+    display:inline-block;
+    width:146px;
+    height:76px;
+    padding:20px 0;
+    img{
+      display:block;
+      height:36px;
+      width:auto;
+      margin:0 auto;
+    }
+  }
+  &__menu-btn{
+    width:77px;
+    background-color:#9ba5aa;
+    color:#fff;
+    font:normal normal 15px/76px 'icomoon';
+    text-align:center;
+    cursor:pointer;
+    margin:0 auto 0 0;
+    &:before{
+      content:'\e910';
+    }
+    &.active{
+      color:@orange;
+    }
+  }
+  &.fixed &__menu-btn{
+    display:inline-block;  
+  }
+  &.fixed &__worktime{
+    display:none;
+  }
+  &.fixed &__phones{
+    width:auto;
+    padding:0;
+    margin:0;
+    font-size:16px;
+    &:before{
+      display:none;
+    }
+    br{
+      display:none;
+    }
+    a{
+      margin:0 0 0 1.2em;
+    }
+  }
+  &.fixed &__info{
+    display:none;
+  }
+  &__search-btn{
+    font:normal normal 19px/1 'fontAwesome';
+    color:#9ba5aa;
+    cursor:pointer;
+    padding:0 .5em;
+    margin:0 25px 0 22px;
+    &:before{
+      content:'\f002';
+    }
+  }
+  &.fixed &__search-btn{
+    display:inline-block;
+  }
+  &.fixed &__bottomline{
+    background:none;
+    border-radius:0 0 10px 10px;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:-1;
+    opacity:0;
+    pointer-events:none;
+    transition:all .2s ease;
+    &.open{
+      top:100%;
+      opacity:1;
+      pointer-events:all;
+    }
+  }
+  &.fixed &__menu{
+    background-color:#f5f5f5;
+    border-radius:0 0 10px 10px;
+    box-shadow: 0px 52px 85px 0px rgba(0, 0, 0, 0.09);
+    >li{
+      >a{
+        padding:1.1em .9em;
       }
     }
   }
@@ -600,26 +722,249 @@ h6{}
 }
 .review-card{
   width:445px;
-  margin:0 15px 30px;
+  margin:0 15px 59px;
+  &__text{
+    padding:20px 15px 24px 36px;
+    background-color:#fff;
+    box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.1);
+    color:rgba(0,0,0,.8);
+    position:relative;
+    margin:0 0 30px;
+    min-height:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    font-size:16px;
+    &:after{
+      content:'';
+      display:block;
+      position:absolute;
+      top:100%;
+      left:18px;
+      border-top:21px solid #fff;
+      border-right:30px solid transparent;
+    }
+  }
+  &__head{
+    display:flex;
+    align-items:center;
+  }
+  &__pic{
+    width:49px;
+    height:49px;
+    background:url(../img/icons/user.svg) no-repeat center ~"9px/41px" auto,#dedfe3;
+    border-radius:50%;
+    flex:0 0 auto;
+    margin:0 10px 0 0;
+    img{
+      display:block;
+      width:100%;
+      height:100%;
+      border-radius:inherit;
+      .obj;
+    }
+  }
+  &__info{
+    width:~"calc(100% - 59px)";
+    flex:1 1 auto;
+    font-size:12.82px;
+    a{
+      display:inline-block;
+      border-bottom:1px solid @orange;
+    }
+  }
+  &__title{
+    margin:0 0 4px;
+  }
+  &__key{
+    color:rgba(0,0,0,.5);
+    margin:0 4px 0 0;
+  }
 }
+@supports(filter:drop-shadow(0 0 10px)){
+  .review-card__text{
+    box-shadow:none;
+    filter:drop-shadow(0 0 27px rgba(0, 0, 0, 0.1));
+  }
+}
+
 .reviews{
-  padding:95px 0 95px;
+  padding:95px 0 120px;
   &__wrapper{
-    max-width:980px;
+    max-width:1010px;
   }
   &__title{
     text-align:center;
-    margin:0 0 2em;
+    margin:0 0 1.4em;
   }
   &__box{
     justify-content:space-between;
+    padding:0 0 0 30px;
   }
   &__footer{
     text-align:center;
+    margin:5px 0 0;
   }
 }
-
+.booking{
+  background-color:@gray;
+  padding:95px 0 92px;
+  position:relative;
+  &:before{
+    content:'';
+    display:block;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:241px;
+    height:758px;
+    background:url(../img/bg.png) no-repeat left bottom/contain;
+  }
+  &__wrapper{
+    max-width:950px;
+    position:relative;
+  }
+  &__title{
+    margin:0 0 1.6em;
+    strong{
+      font-weight:600;
+      display:block;
+    }
+  }
+  &__form{
+    display:flex;
+    align-items:flex-start;
+    input{
+      margin:0 25px 20px 0;
+      flex:1 1 auto;
+    }
+  }
+  &__btn{
+    flex:0 0 auto;
+  }
+}
+.contacts{
+  position:relative;
+  padding:60px 0;
+  &__map{
+    .pos();
+  }
+  &__text{
+    position:relative;
+    z-index:2;
+    background-color:#fff;
+    width:445px;
+    margin-left:~"calc(50% + 15px)";
+    padding:34px 65px 35px;
+    p{
+      margin:0 0 1em;
+      &:last-child{
+        margin:0;
+      }
+    }
+  }
+}
+[class*="ground-pane"]{
+  filter: grayscale(1);
+}
 /*ПОДВАЛ*/
-
+.footer{
+  background-color:#282828;
+  color:#fff;
+  font-size:14px;
+  padding:98px 0 93px;
+  letter-spacing:-0.013em;
+  &__wrapper{
+    max-width:950px;
+    display:flex;
+  }
+  &__main{
+    width:190px;
+    margin:2px 46px 0 0;
+  }
+  &__logo{
+    width:150px;
+    margin:0 0 2.1em;
+  }
+  &__nav{
+    width:210px;
+    margin:0 30px 0 0;
+    &-title{
+      margin:0 0 1.1em;
+    }
+  }
+  &__menu{
+    .unlist;
+    line-height:22/14;
+    a{
+      text-decoration:underline;
+    }
+  }
+  &__contacts{
+    width:160px;
+    margin:0 30px 0 0;
+    &-title{
+      margin:0 0 1.4em;
+    }
+  }
+  &__info{
+    width:211px;
+    margin:0 0 0 auto;
+    &-title{
+      margin:0 0 .8em;
+    }
+  }
+  &__callback{
+    font-size:13px;
+    position:relative;
+    margin:0 0 19px;
+    &:before{
+      content:'\e909';
+      font:normal normal 13px/1 'icomoon';
+      display:inline-block;
+      position:absolute;
+      top:~"calc(50% - .5em)";
+      right:15px;
+    }
+    input{
+      display:block;
+      width:100%;
+      background:none;
+      padding:7px 30px 7px 15px;
+    }
+  }
+  &__payment{
+    font-size:30px;
+    line-height:1;
+    letter-spacing:2px;
+    margin:0 0 12px;
+    i{
+      vertical-align: middle;
+    }
+    .icon-apple-pay{
+      font-size:140%;
+      margin:0 0 0 5px;
+    }
+  }
+  &__policy{
+    font-size:13px;
+    margin:0 0 3.3em;
+    a{
+      text-decoration:underline;
+    }
+  }
+  &__author{
+    color:rgba(255,255,255,.8);
+    letter-spacing:-0.05em;
+    i{
+      color:#fff;
+      margin:0 2px;
+      vertical-align: text-bottom;
+    }
+    .icon-brain{
+      font-size:131%;
+    }
+  }
+}
 /*АДАПТИВ*/
 @import "adaptive";

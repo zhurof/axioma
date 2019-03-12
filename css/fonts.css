@@ -96,7 +96,7 @@
 .icon-implantation:before {
   content: "\e906";
 }
-.icon-master-card:before {
+.icon-mastercard:before {
   content: "\e907";
 }
 .icon-orthodontics:before {
@@ -122,4 +122,7 @@
 }
 .icon-whitening:before {
   content: "\e90f";
+}
+.icon-menu:before {
+  content: "\e910";
 }
