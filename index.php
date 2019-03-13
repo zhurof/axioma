@@ -1,4 +1,8 @@
-﻿<?php	include "header.php";?>		
+﻿<?php	include "header.php";?>
+  <script>
+    //Реализовать добавление класса на стороне сервера
+    document.querySelector('.header').classList.add('header_trans');
+  </script>
 	<main>
 		<div class="top-block">
 		  <div class="top-block__slider">
@@ -8,6 +12,15 @@
               <h2 class="top-block__title">Небольшой заголовок в 2 строки</h2>
               <div class="top-block__text">Текст анонса новости, акции, или предстоящего события, желательно в две строки</div>
               <a href="#/" class="btn top-block__btn">Запись на прием</a>
+            </div>
+          </div>
+		    </div>
+        <div class="top-block__slide" style="background-image:url(https://www.exler.ru/blog/upload/images/big/SDIM1346.jpg)">
+		      <div class="wrapper">
+            <div class="top-block__content">
+              <h2 class="top-block__title">Небольшой заголовок</h2>
+              <div class="top-block__text">Текст анонса новости, акции, или предстоящего события, желательно в две строки</div>
+              <a href="#/" class="btn top-block__btn">Кнопка</a>
             </div>
           </div>
 		    </div>
@@ -28,7 +41,7 @@
               <a href="#/" class="btn top-block__btn">Кнопка</a>
             </div>
           </div>
-		    </div>
+		    </div>        
 		  </div>
 		</div>
     <div class="about">
@@ -80,19 +93,19 @@
         <h2 class="advantages__title">Преимущества</h2>
         <div class="box advantages__box">
           <div class="advantages__item">
-            <h3 class="advantages__subtitle">Индивидуальный подход</h3>
+            <h4 class="advantages__subtitle">Индивидуальный подход</h4>
             <p>Комплексный подход к проблеме пациента является приоритетным. Каждый пациент для нас индивидуален</p>
           </div>
           <div class="advantages__item">
-            <h3 class="advantages__subtitle">Гарантия</h3>
+            <h4 class="advantages__subtitle">Гарантия</h4>
             <p>Мы гарантируем высокий уровень сервиса, качественное лечение, стабильные результаты и разумные цены.   </p>
           </div>
           <div class="advantages__item">
-            <h3 class="advantages__subtitle">Современное оборудование</h3>
+            <h4 class="advantages__subtitle">Современное оборудование</h4>
             <p>Только новые технологии, современное оборудование и сертифицированные материалы. </p>
           </div>
           <div class="advantages__item">
-            <h3 class="advantages__subtitle">Специалисты</h3>
+            <h4 class="advantages__subtitle">Специалисты</h4>
             <p>Опыт работы более 8 лет позволяет решить проблемы пациентов любого уровня сложности.</p>
           </div>
         </div>
@@ -105,35 +118,35 @@
           <div class="employees__slide">
             <a href="#/" class="employees__link"></a>
             <img src="img/doctors/1.jpg" class="employees__img" alt="">
-            <h3 class="employees__subtitle">Амириди <br>Дмитрий</h3>
+            <h4 class="employees__subtitle">Амириди <br>Дмитрий</h4>
             <div class="employees__position">Хирург- имплантолог</div>
             <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
           <div class="employees__slide">
             <a href="#/" class="employees__link"></a>
             <img src="img/doctors/2.jpg" class="employees__img" alt="">
-            <h3 class="employees__subtitle">Кусевицкий <br>Леонид</h3>
+            <h4 class="employees__subtitle">Кусевицкий <br>Леонид</h4>
             <div class="employees__position">Хирург- имплантолог</div>
             <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
           <div class="employees__slide">
             <a href="#/" class="employees__link"></a>
             <img src="img/doctors/3.jpg" class="employees__img" alt="">
-            <h3 class="employees__subtitle">Маканина <br>Лина</h3>
+            <h4 class="employees__subtitle">Маканина <br>Лина</h4>
             <div class="employees__position">Хирург- имплантолог</div>
             <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
           <div class="employees__slide">
             <a href="#/" class="employees__link"></a>
             <img src="img/doctors/4.jpg" class="employees__img" alt="" data-role="0YfQtdGA0L3QuNC70YzQvdC40YbQsA==">
-            <h3 class="employees__subtitle">Амириди <br>Марина</h3>
+            <h4 class="employees__subtitle">Амириди <br>Марина</h4>
             <div class="employees__position">Хирург- имплантолог</div>
             <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
           <div class="employees__slide">
             <a href="#/" class="employees__link"></a>
             <img src="img/doctors/2.jpg" class="employees__img" alt="">
-            <h3 class="employees__subtitle">Кусевицкий <br>Леонид</h3>
+            <h4 class="employees__subtitle">Кусевицкий <br>Леонид</h4>
             <div class="employees__position">Хирург- имплантолог</div>
             <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
@@ -152,7 +165,7 @@
             <div class="review-card__head">
               <div class="review-card__pic"></div>
               <div class="review-card__info">
-                <h3 class="review-card__title">Николай А.</h3>
+                <h4 class="review-card__title">Николай А.</h4>
                 <div class="review-card__field">
                   <span class="review-card__key">Услуга:</span>
                   <span class="review-card__value"><a href="">Имплантация зубов</a></span>
@@ -165,7 +178,7 @@
             <div class="review-card__head">
               <div class="review-card__pic female"></div>
               <div class="review-card__info">
-                <h3 class="review-card__title">Ольга Н.</h3>
+                <h4 class="review-card__title">Ольга Н.</h4>
                 <div class="review-card__field">
                   <span class="review-card__key">Услуга:</span>
                   <span class="review-card__value"><a href="#/">Удаление зубов</a></span>
@@ -178,7 +191,7 @@
             <div class="review-card__head">
               <div class="review-card__pic"></div>
               <div class="review-card__info">
-                <h3 class="review-card__title">Алексей Н.</h3>
+                <h4 class="review-card__title">Алексей Н.</h4>
                 <div class="review-card__field">
                   <span class="review-card__key">Услуга:</span>
                   <span class="review-card__value"><a href="#/">Лечение зубов</a></span>
@@ -191,7 +204,7 @@
             <div class="review-card__head">
               <div class="review-card__pic"></div>
               <div class="review-card__info">
-                <h3 class="review-card__title">Игорь Л.</h3>
+                <h4 class="review-card__title">Игорь Л.</h4>
                 <div class="review-card__field">
                   <span class="review-card__key">Услуга:</span>
                   <span class="review-card__value"><a href="#/">Имплантация зубов</a> , <a href="#/">Лечение зубов</a></span>

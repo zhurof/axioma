@@ -6,7 +6,7 @@
         <p>Услуги оказываются на основании лицензии на медицинскую деятельность № 78-01-003452 <br>от 5 апреля 2013 года</p>
       </div>
       <div class="footer__nav">
-        <h3 class="footer__nav-title">Наши услуги</h3>
+        <h4 class="footer__nav-title">Наши услуги</h3>
         <ul class="footer__menu">
           <li><a href="#/">Протезирование зубов</a></li>
           <li><a href="#/">Виниры</a></li>
@@ -20,14 +20,14 @@
         </ul>
       </div>
       <div class="footer__contacts">
-        <h3 class="footer__contacts-title">Наши контакты</h3>
+        <h4 class="footer__contacts-title">Наши контакты</h3>
         <p><a href="tel:12341241243">+7 (812)  272 - 21 - 25 </a> <br><a href="tel:12341241243">+7 (921)  401 - 99 - 66 </a></p>
         <p><a href="mailto:clinic@axiomadental.ru">clinic@axiomadental.ru</a></p>
         <p>Пн - Сб / 10:00 - 21:00 <br>Вс / 10:00 - 19:00</p>
         <p>195297, Россия, <br>г. Санкт-Петербург, <br>ул. Гагаринская 30</p>
       </div>
       <div class="footer__info">
-        <h3 class="footer__info-title">Обратный звонок</h3>
+        <h4 class="footer__info-title">Обратный звонок</h3>
         <form action="#" class="footer__callback">
           <input type="text" placeholder="Ваше имя" />
         </form>
@@ -47,6 +47,7 @@
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
 	<script src="//code.jquery.com/jquery-latest.min.js" defer></script>
 	<script src="libs/slick/slick.min.js" defer></script>
+	<script src="libs/fancybox/jquery.fancybox.min.js" defer></script>
 	<script src="js/script.js" defer></script>	
 </body>
 </html>

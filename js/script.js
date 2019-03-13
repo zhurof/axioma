@@ -39,17 +39,23 @@ $('.header__mobile-search input').blur(function(){
   $('.header__search-btn').removeClass('active');
   $('.header__mobile-search').removeClass('open');
 })
-$('.lang__title').click(function(){
+/* $('.lang__title').click(function(){
   $(this).siblings('.lang__list').slideToggle(200);
 })
 $(document).click(function(e){
   if(!$(e.target).is('.lang') && !$('.lang').has(e.target).size()){
     $('.lang__list').hide();
   }
+}) */
+//галерея
+$('.gallery__trigger').click(function(){
+  $(this).siblings('.gallery__item').eq(0).trigger('click');
 })
+//слайдеры
 $('.top-block__slider').slick({
   arrows:false,
   dots:true,
+  fade:true,
   dotsClass:'top-block__dots',
   customPaging:function(slider,i){
     var result = i+1;
@@ -77,11 +83,10 @@ $('.employees__slider').slick({
     }
   ]
 })
-
 //Карта
 if($('#map').length){
 	ymaps.ready(function(){
-    var address = $('#address').text() || 'Караганда',
+    var address = $('#address').text() || $('#map').data('address') ||'Караганда',
         centerCoords = [];
         
     ymaps.geocode(address, {

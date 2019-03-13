@@ -7,17 +7,19 @@
 	<link rel="stylesheet" href="css/fonts.css" />	
 	<link rel="stylesheet" href="css/font-awesome.css" />
 	<link rel="stylesheet" href="libs/slick/slick.css" />
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-	<header class="header header_abs">
+	<header class="header">
 		<div class="header__topline">
       <div class="wrapper">
         <div class="header__topline-inner">
-          <h1 class="header__title">Цифровая стоматология. CAD / CAM</h1>
+          <a href="digital-dentistry.php" class="header__link">Цифровая стоматология. CAD / CAM</a>
           <div class="header__address">г. Санкт-Петербург, ул. Гагаринская 30</div>
           <form action="#/" class="search">
             <input type="search" class="search__input" />
+            <i class="fa-search search__icon"></i>
           </form>
           <div class="lang header__lang">
             <div class="lang__title">Language</div>
@@ -32,7 +34,7 @@
     <div class="header__midline">
       <div class="wrapper">
         <div class="header__midline-inner">
-          <a href="#/" class="logo header__logo">
+          <a href="/" class="logo header__logo">
             <img src="img/logo.svg" alt="" />
           </a>
           <a href="/" class="header__icon">
@@ -68,7 +70,7 @@
     <div class="header__bottomline">
       <div class="wrapper">
         <ul class="header__menu">
-          <li><a href="#/">О клинике</a></li>
+          <li><a href="about.php">О клинике</a></li>
           <li><a href="#/">Услуги</a></li>
           <li><a href="#/">Врачи</a></li>
           <li><a href="#/">Акции</a></li>
