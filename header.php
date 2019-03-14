@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/font-awesome.css" />
 	<link rel="stylesheet" href="libs/slick/slick.css" />
 	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="libs/twentytwenty/twentytwenty.css" />
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>

@@ -4,7 +4,7 @@
     <li><a href="news.php">Новости</a></li>
     <li><a href="licenses.php">Лицензии и сертификаты</a></li>
     <li><a href="tour.php">Виртуальный тур</a></li>
-    <li><a href="study-clup.php">ITI Study Club</a></li>
+    <li><a href="study-club.php">ITI Study Club</a></li>
     <li><a href="digital-dentistry.php">Цифровая стоматология</a></li>
   </ul>
   <script>

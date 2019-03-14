@@ -48,6 +48,8 @@
 	<script src="//code.jquery.com/jquery-latest.min.js" defer></script>
 	<script src="libs/slick/slick.min.js" defer></script>
 	<script src="libs/fancybox/jquery.fancybox.min.js" defer></script>
+	<script src="libs/twentytwenty/jquery.event.move.js" defer></script>
+	<script src="libs/twentytwenty/jquery.twentytwenty.js" defer></script>
 	<script src="js/script.js" defer></script>	
 </body>
 </html>

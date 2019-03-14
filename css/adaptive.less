@@ -9,6 +9,21 @@
       box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1);
     }
   }
+  .file-link{
+    transition:all .2s ease;
+    &:before{
+      filter:grayscale(1);
+      transition:inherit;
+    }
+    &:hover{
+      background-color:#fff;
+      color:fade(#000,80%);
+      box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.1);
+      &:before{
+        filter:grayscale(0);
+      }
+    }
+  }
   .services{
     &__icon{
       transition:all .2s ease;
@@ -72,7 +87,16 @@
       }
     }
   }
+  .post-card{
+    transition:all .2s ease;
+    &:hover{
+      box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.15);
+      border-color:transparent;
+    }
+  }
 }
+
+
 
 @media(max-width:1199px){
 	.wrapper{
@@ -97,12 +121,12 @@
       padding:0 ~"calc(50% - 481px)";
     }
   }
-  .services{
+  /* .services{
     background-position:75% center;
   }
   .advantages{
     background-position:10% center;
-  }
+  } */
   .employees{
     &__slider{
       padding:0 60px;
@@ -188,6 +212,9 @@
           padding:1em 0;
         }
       }
+    }
+    &_trans &__menu{
+      border-radius:0 0 10px 10px;
     }
   }
 	.top-block{
@@ -309,12 +336,13 @@
       display:block;
       padding:.5em 0;
       top:-100vh;
+      border-radius:0 0 10px 10px;
       >li{
         >a{
           padding:.5em 0;
         }
       }
-    }
+    }    
   }
 	.top-block{
     text-align:center;
@@ -397,6 +425,9 @@
       }
     }
     &__menu{
+      border-radius:0;
+    }
+    &_trans &__menu{
       border-radius:0;
     }
     &__mobile-search{

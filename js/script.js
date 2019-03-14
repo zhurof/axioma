@@ -83,6 +83,56 @@ $('.employees__slider').slick({
     }
   ]
 })
+//Объект с классами иконок и именами категорий
+var categories = {
+  orthodontics:{
+    iconClass:'icon-orthodontics',
+    niceName:'Ортодонтия'
+  },
+  treatment:{
+    iconClass:'icon-treatment',
+    niceName:'Лечение зубов'
+  },
+  whitening:{
+    iconClass:'icon-whitening',
+    niceName:'Отбеливание зубов'
+  },
+  extraction:{
+    iconClass:'icon-extraction',
+    niceName:'Удаление зубов'
+  },
+  implantation:{
+    iconClass:'icon-implantation',
+    niceName:'Имплантация'
+  }
+}
+$('.view__body').on('init reInit afterChange',function(event,slick,currentSlide){
+  var i =  (currentSlide ? currentSlide : 0),
+      category = slick.$slides[i].getAttribute('data-category'),
+      itemDescription = slick.$slides[i].getAttribute('data-description');
+      
+  $(this).parents('.view').find('.view__text').html('<h4 class="view__title">Случай '+( +i + 1 )+': </h4>' + itemDescription);
+  $(this).parents('.view').find('.view__category').html('<i class="'+categories[category].iconClass+'"></i> '+categories[category].niceName);
+})
+$('.view__body').on('init reInit', function(){
+  $(".view__slider").twentytwenty({
+      //before_label: 'До',
+      //after_label: 'После',
+      no_overlay: true,
+      click_to_move: true
+  });
+});
+
+$('.view__body').slick({
+  infinite:false,
+  accessibility:false,
+  swipe:false,
+  adaptiveHeight:true,
+  prevArrow:'<span class="view__arrow prev"></span>',
+  nextArrow:'<span class="view__arrow next"></span>',
+  appendArrows:$('.view__nav')
+})
+
 //Карта
 if($('#map').length){
 	ymaps.ready(function(){
