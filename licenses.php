@@ -21,26 +21,32 @@
               </div>
             </article>
             <article class="text-block">
-              <h3>Сертификаты <u>Маканиной Лины</u>:</h3>
+              <h3>Сертификаты <a href="#/">Маканиной Лины</a>:</h3>
               <div class="gallery">
                 <a href="img/license/full/4.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/4.jpg" alt=""></a>
                 <a href="img/license/full/5.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/5.jpg" alt=""></a>
-                <a href="img/license/full/6.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/6.jpg" alt=""></a>
+                <a href="img/license/full/6.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/6.jpg" alt=""></a> 
+              </div>
+              <div class="gallery">
                 <a href="img/license/full/7.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/7.jpg" alt=""></a>
                 <a href="img/license/full/8.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/8.jpg" alt=""></a>
               </div>
             </article>
             <article class="text-block">
-              <h3>Сертификаты <u>Дмитрия Амириди</u>:</h3>
+              <h3>Сертификаты <a href="#/">Дмитрия Амириди</a>:</h3>
               <div class="gallery">
                 <a href="img/license/full/9.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/9.jpg" alt=""></a>
                 <a href="img/license/full/10.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/10.jpg" alt=""></a>
                 <a href="img/license/full/11.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/11.jpg" alt=""></a>
                 <a href="img/license/full/12.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/12.jpg" alt=""></a>
+              </div>
+              <div class="gallery">
                 <a href="img/license/full/13.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/13.jpg" alt=""></a>
                 <a href="img/license/full/14.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/14.jpg" alt=""></a>
                 <a href="img/license/full/15.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/15.jpg" alt=""></a>
                 <a href="img/license/full/16.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/16.jpg" alt=""></a>
+              </div>
+              <div class="gallery">
                 <a href="img/license/full/17.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/17.jpg" alt=""></a>
                 <a href="img/license/full/18.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/18.jpg" alt=""></a>
                 <a href="img/license/full/19.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/19.jpg" alt=""></a>

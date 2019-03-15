@@ -8,7 +8,7 @@
     <li><a href="digital-dentistry.php">Цифровая стоматология</a></li>
   </ul>
   <script>
-    //Реализовать добавление класса активному пункту на стороне сервера
+    //Добавление класса активному пункту меню на JS для демонстрации. В процессе посадки на cms - удалить.
     var sbLinks = document.querySelectorAll('.sidebar__menu a');
     for (var i = 0; i<sbLinks.length; i++){
       if(sbLinks[i].href == location.href){

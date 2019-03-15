@@ -71,17 +71,92 @@
     <div class="header__bottomline">
       <div class="wrapper">
         <ul class="header__menu">
-          <li><a href="about.php">О клинике</a></li>
-          <li><a href="#/">Услуги</a></li>
-          <li><a href="#/">Врачи</a></li>
-          <li><a href="#/">Акции</a></li>
-          <li><a href="#/">Цены</a></li>
-          <li><a href="#/">Отзывы</a></li>
-          <li><a href="#/">Пациентам</a></li>
-          <li><a href="#/">Контакты</a></li>
+          <li class="has-children">
+            <a href="about.php">О клинике</a>
+            <ul>
+              <li><a href="news.php">Новости</a></li>
+              <li><a href="licenses.php">Лицензии и сертификаты</a></li>
+              <li><a href="tour.php">Виртуальный тур</a></li>
+              <li><a href="study-club.php">ITI Study Club</a></li>
+              <li><a href="digital-dentistry.php">Цифровая стоматология</a></li>
+            </ul>
+          </li>
+          <li class="has-children">
+            <a href="services.php">Услуги</a>
+            <ul>
+              <li class="has-children">
+                <a href="service.php">Лечение зубов</a>
+                <ul>
+                  <li><a href="service.php">Подпункт</a></li>
+                  <li><a href="service.php">Подпункт</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href="service.php">Отбеливание зубов</a>
+                <ul>
+                  <li><a href="service.php">Подпункт</a></li>
+                  <li><a href="service.php">Подпункт</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href="service.php">Ортодонтия</a>
+                <ul>
+                  <li><a href="service.php">Подпункт</a></li>
+                  <li><a href="service.php">Подпункт</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href="service.php">Имплантация</a>
+                <ul>
+                  <li><a href="service.php">Подпункт</a></li>
+                  <li><a href="service.php">Подпункт</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href="service.php">Удаление зубов</a>
+                <ul>
+                  <li><a href="service.php">Удаление зуба мудрости</a></li>
+                  <li><a href="service.php">Удаление ретинированного зуба мудрости</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="service.php">Эстетическая стоматология</a>
+              </li>
+              <li class="has-children">
+                <a href="service.php">Виниры</a>
+                <ul>
+                  <li><a href="service.php">Подпункт</a></li>
+                  <li><a href="service.php">Подпункт</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href="service.php">Протезирование</a>
+                <ul>
+                  <li><a href="service.php">Подпункт</a></li>
+                  <li><a href="service.php">Подпункт</a></li>
+                </ul>
+              </li>
+              <li><a href="service.php">Удаление зубного нерва</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.php">Врачи</a></li>
+          <li><a href="actions.php">Акции</a></li>
+          <li><a href="prices.php">Цены</a></li>
+          <li><a href="reviews.php">Отзывы</a></li>
+          <li><a href="to-patients.php">Пациентам</a></li>
+          <li><a href="contacts.php">Контакты</a></li>
         </ul>
       </div>
     </div>
 	</header>
+  <script>
+    //Добавление класса активному пункту меню на JS для демонстрации. В процессе посадки на cms - удалить.
+    var sbLinks = document.querySelectorAll('.header__menu a');
+    for (var i = 0; i<sbLinks.length; i++){
+      if(sbLinks[i].href == location.href){
+        sbLinks[i].parentElement.classList.add('active');
+      }
+    }
+  </script>
 <!-- Переход на страницу со ссылками на современные браузеры для ie9 и ниже -->
 <!--[if lt IE 10]><script>location.href='/old-ie.html';</script><![endif]-->

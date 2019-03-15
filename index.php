@@ -168,7 +168,7 @@
                 <h4 class="review-card__title">Николай А.</h4>
                 <div class="review-card__field">
                   <span class="review-card__key">Услуга:</span>
-                  <span class="review-card__value"><a href="">Имплантация зубов</a></span>
+                  <span class="review-card__value"><a href="service.php">Имплантация зубов</a></span>
                 </div>
               </div>
             </div>
@@ -181,7 +181,7 @@
                 <h4 class="review-card__title">Ольга Н.</h4>
                 <div class="review-card__field">
                   <span class="review-card__key">Услуга:</span>
-                  <span class="review-card__value"><a href="#/">Удаление зубов</a></span>
+                  <span class="review-card__value"><a href="service.php">Удаление зубов</a></span>
                 </div>
               </div>
             </div>
@@ -194,7 +194,7 @@
                 <h4 class="review-card__title">Алексей Н.</h4>
                 <div class="review-card__field">
                   <span class="review-card__key">Услуга:</span>
-                  <span class="review-card__value"><a href="#/">Лечение зубов</a></span>
+                  <span class="review-card__value"><a href="service.php">Лечение зубов</a></span>
                 </div>
               </div>
             </div>
@@ -207,13 +207,13 @@
                 <h4 class="review-card__title">Игорь Л.</h4>
                 <div class="review-card__field">
                   <span class="review-card__key">Услуга:</span>
-                  <span class="review-card__value"><a href="#/">Имплантация зубов</a> , <a href="#/">Лечение зубов</a></span>
+                  <span class="review-card__value"><a href="service.php">Имплантация зубов</a> , <a href="#/">Лечение зубов</a></span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="reviews__footer"><a href="#/" class="btn">Все отзывы</a></div>
+        <div class="reviews__footer"><a href="reviews.php" class="btn">Все отзывы</a></div>
       </div>
     </div>
     <?php	include "booking.php";?>

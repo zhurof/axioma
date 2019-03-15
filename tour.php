@@ -4,9 +4,11 @@
         <div class="breadcrumbs">
           <a href="/">Главная</a>
           <span class="breadcrumbs__separ">/</span>
-          <span>О клинике</span>
+          <a href="about.php">О клинике</a>
+          <span class="breadcrumbs__separ">/</span>
+          <span>Виртуальный тур</span>
         </div>
-        <h1>О клинике</h1>
+        <h1>Виртуальный тур</h1>
         <div class="page__inner">
           <?php	include "aside.php";?>
           <div class="page__content page__content_spacer">

@@ -8,6 +8,8 @@ function changeTemplate(){
     $('.header').removeClass('fixed');
   }else{
     $(window).on('load scroll',changeHeader);
+    $('.header__menu ul').css('display','');
+    $('.header__menu .has-children.open').removeClass('open');
   }
 }
 $(document).ready(changeTemplate);
@@ -39,14 +41,14 @@ $('.header__mobile-search input').blur(function(){
   $('.header__search-btn').removeClass('active');
   $('.header__mobile-search').removeClass('open');
 })
-/* $('.lang__title').click(function(){
-  $(this).siblings('.lang__list').slideToggle(200);
-})
-$(document).click(function(e){
-  if(!$(e.target).is('.lang') && !$('.lang').has(e.target).size()){
-    $('.lang__list').hide();
+
+$('.header__menu .has-children').click(function(e){
+  if(!$(this).find(e.target).length && is_mobile()){
+    $(this).toggleClass('open');
+    $(this).children('ul').slideToggle(200);
+    $(this).siblings('.has-children.open').removeClass('open').children('ul').slideUp(200);
   }
-}) */
+})
 //галерея
 $('.gallery__trigger').click(function(){
   $(this).siblings('.gallery__item').eq(0).trigger('click');
@@ -116,8 +118,6 @@ $('.view__body').on('init reInit afterChange',function(event,slick,currentSlide)
 })
 $('.view__body').on('init reInit', function(){
   $(".view__slider").twentytwenty({
-      //before_label: 'До',
-      //after_label: 'После',
       no_overlay: true,
       click_to_move: true
   });

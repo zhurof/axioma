@@ -6,9 +6,9 @@
           <span class="breadcrumbs__separ">/</span>
           <a href="about.php">О клинике</a>
           <span class="breadcrumbs__separ">/</span>
-          <span>Новости</span>
+          <span>Цифровая стоматология</span>
         </div>
-        <h1>Новости</h1>
+        <h1>Цифровая стоматология</h1>
         <div class="page__inner">
           <?php	include "aside.php";?>
           <div class="page__content">
@@ -108,30 +108,30 @@
             <div class="text-block">
               <h2>Сравнение традиционной и цифровой стоматологии</h2>
               <div class="price">
-                <div class="price__field">
-                  <div class="price__key"><span>Диагностическое сканирование</span></div>
-                  <div class="price__value"><span>1 500 р.</span></div>
-                </div>
-                <div class="price__field">
-                  <div class="price__key"><span>Вкладка керамическая CAD/CAM</span></div>
-                  <div class="price__value"><span>от 34 000 р.</span></div>
-                </div>
-                <div class="price__field">
-                  <div class="price__key"><span>Винир керамический CAD/CAM</span></div>
-                  <div class="price__value"><span>от 50 000 р.</span></div>
-                </div>
-                <div class="price__field">
-                  <div class="price__key"><span>Коронка цельнокерамическая CAD/CAM</span></div>
-                  <div class="price__value"><span>от 55 000 р.</span></div>
-                </div>
-                <div class="price__field">
-                  <div class="price__key"><span>Коронка цельнокерамическая CAD/CAM на имплантате</span></div>
-                  <div class="price__value"><span>от 55 000 р.</span></div>
-                </div>
-                <div class="price__field">
-                  <div class="price__key"><span>Хирургический 3D-шаблон</span></div>
-                  <div class="price__value"><span>5 000 р.</span></div>
-                </div>
+                <a href="service.php" class="price__field">
+                  <span class="price__key"><span>Диагностическое сканирование</span></span>
+                  <span class="price__value"><span>1 500 р.</span></span>
+                </a>
+                <a href="service.php" class="price__field">
+                  <span class="price__key"><span>Вкладка керамическая CAD/CAM</span></span>
+                  <span class="price__value"><span>от 34 000 р.</span></span>
+                </a>
+                <a href="service.php" class="price__field">
+                  <span class="price__key"><span>Винир керамический CAD/CAM</span></span>
+                  <span class="price__value"><span>от 50 000 р.</span></span>
+                </a>
+                <a href="service.php" class="price__field">
+                  <span class="price__key"><span>Коронка цельнокерамическая CAD/CAM</span></span>
+                  <span class="price__value"><span>от 55 000 р.</span></span>
+                </a>
+                <a href="service.php" class="price__field">
+                  <span class="price__key"><span>Коронка цельнокерамическая CAD/CAM на имплантате</span></span>
+                  <span class="price__value"><span>от 55 000 р.</span></span>
+                </a>
+                <a href="service.php" class="price__field">
+                  <span class="price__key"><span>Хирургический 3D-шаблон</span></span>
+                  <span class="price__value"><span>5 000 р.</span></span>
+                </a>
               </div>
             </div>
           </div>

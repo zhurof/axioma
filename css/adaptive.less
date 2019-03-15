@@ -1,4 +1,5 @@
 ﻿@media(min-width:992px){
+  //Все важные эффекты при наведении тут, дабы потом не бороться с ними в мобильной версии
   .btn{
     transition:all .2s ease;
     &:hover{
@@ -21,6 +22,37 @@
       box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.1);
       &:before{
         filter:grayscale(0);
+      }
+    }
+  }
+  .header{
+    &__menu{
+      >li{
+        >a{
+          transition:all .2s ease;
+        }
+        &:hover>a{
+          border-color:@orange;      
+        }
+      }
+      li:hover>ul{
+        display:block;
+      }
+      ul{
+        li{
+          &:after{
+            transition:all .2s ease;
+          }
+          &:hover:after{
+            opacity:1;
+          }
+        }
+        a{
+          transition:all .2s ease;
+          &:hover{
+            opacity:.8;
+          }
+        }
       }
     }
   }
@@ -94,9 +126,25 @@
       border-color:transparent;
     }
   }
+  .price{
+    &__field{
+      transition:all .2s ease;
+      &:hover{
+        color:@orange;
+        border-color:@orange;
+      }
+    }
+  }
+  .callback{
+    &:hover &__input{
+      border-color:currentColor;
+    }
+    &:hover &__btn{
+      background-color:#fff;
+      color:#535353;
+    }
+  }
 }
-
-
 
 @media(max-width:1199px){
 	.wrapper{
@@ -138,6 +186,39 @@
       &_next{
         right:-10px;
       }
+    }
+  }
+  .page{
+    padding:300px 0 100px;
+    &__content{
+      padding:0 0 0 40px;
+    }
+  }
+  .news{
+    &__box{
+      justify-content:center;
+    }
+  }
+  .post-card{
+    width:290px;
+    padding:30px 20px;
+    font-size:14px;
+    &__title{
+      font-size:16px;
+    }
+  }
+  .simile{
+    th{
+      padding:30px 40px;
+    }
+    td{
+      padding:12px 40px 12px;
+    }
+  }
+  .view{
+    &__text{
+      margin:0 30px;
+      font-size:16px;
     }
   }
 }
@@ -206,10 +287,75 @@
     &__menu{
       background-color:#f5f5f5;
       border-radius:0 0 10px 10px;
-      box-shadow: 0px 52px 85px 0px rgba(0, 0, 0, 0.09);
+      border:none;
+      display:block;
+      padding:.5em 0;
+      top:-100vh;
+      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.09);
+      border-radius:0 0 10px 0;
+      width:380px;
+      text-align:left;
+      max-height:~"calc(100vh - 76px)";
+      overflow:auto;
       >li{
+        border:none;
         >a{
-          padding:1em 0;
+          border:none;
+          padding:10px 20px;
+        }
+        &.has-children{
+          padding-right:50px;
+          &:after{
+            content:'\f107';
+            font:normal normal 18px/1 fontAwesome;
+            display:inline-block;
+            width:50px;
+            text-align:center;
+            position:absolute;
+            right:0;
+            top:0;
+            padding:15px 0;
+            transition:all .2s ease;            
+          }
+          &.open:after{
+            transform:rotate(180deg);
+            color:@orange;
+          }
+        }
+      }
+      ul{
+        width:auto;
+        background:none;
+        position:static;
+        box-shadow:none;
+        margin:0 0 0 20px;
+        padding:0;
+        border-left:1px solid @orange;
+        >li{
+          &.has-children{
+            &:after{
+              content:'\f107';
+              font:normal normal 18px/1 fontAwesome;
+              display:inline-block;
+              width:50px;
+              text-align:center;
+              position:absolute;
+              right:-50px;
+              top:0;
+              padding:15px 0;
+              opacity:1;
+            }
+            &.open:after{
+              transform:rotate(180deg);
+              color:@orange;
+            }
+          }
+        }
+        a{
+          padding:10px 20px;
+        }
+        ul{
+          padding:0;
         }
       }
     }
@@ -301,11 +447,40 @@
       height:350px;
     }
   }
+  .page{
+    padding:140px 0 50px;
+    &__inner{
+      display:block;
+    }
+    &__sidebar{
+      display:none;
+    }
+    &__content{
+      padding:0;
+      width:auto;
+    }
+  }
+  .file-link{
+    background-color:#fff;
+    color:fade(#000,80%);
+    box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.1);
+  }
+  .gallery{
+    justify-content:center;
+  }
+  .tour{
+    display:block;
+    width:100%;
+    height:600vw * 100/768;
+  }
   .footer{
     padding:45px 0;
   }
 }
 @media(max-width:767px){
+  h1{
+    margin:0 0 1em;
+  }
   .header{
     &__midline-inner{
       padding:0;
@@ -333,16 +508,9 @@
       text-align:center;
     }
     &__menu{
-      display:block;
-      padding:.5em 0;
-      top:-100vh;
-      border-radius:0 0 10px 10px;
-      >li{
-        >a{
-          padding:.5em 0;
-        }
-      }
-    }    
+      margin:0 0 0 auto;
+      border-radius:0 0 0 10px;
+    }
   }
 	.top-block{
     text-align:center;
@@ -365,6 +533,67 @@
   .contacts{
     &__text{
       padding:30px 15px;
+    }
+  }
+  .text-columns{
+    display:block;
+    &__item{
+      width:auto;
+    }
+    br{
+      display:none;
+    }
+  }
+  .text-block{
+    br{
+      display:none;
+    }
+  }
+  .small-map{
+    width:auto;
+  }
+  .simile{
+    font-size:16px;
+    th{
+      font-size:120%;
+      padding:15px;
+    }
+    td{
+      padding:5px 15px;
+    }
+  }
+  .view{
+    &__head{
+      padding:15px;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    &__text{
+      display:none;
+    }
+    &__arrow{
+      &.prev{
+        margin:0 8px 0 0;
+      }
+    }
+  }
+  .twentytwenty{
+    &-horizontal &-handle{
+      &:before,
+      &:after{
+        display:none;
+      }
+    }
+    &-container:before{
+      display:none;
+    }
+  }
+  .price{
+    padding:15px;
+    font-size:16px;
+    &__key,
+    &__value{
+      transform:translateY(5px);
     }
   }
   .footer{
@@ -401,8 +630,14 @@
   }
 }
 @media(max-width:480px){
+  h1{
+    font-size:30px;
+  }
   h2{
     font-size:24px;
+  }
+  h3{
+    font-size:21px;
   }
   .header{
     &__midline{
@@ -426,6 +661,7 @@
     }
     &__menu{
       border-radius:0;
+      width:auto;
     }
     &_trans &__menu{
       border-radius:0;
@@ -458,5 +694,21 @@
         margin:0 0 30px;
       }
     }
+  }
+  .simile{
+    width:auto;
+    margin:0 -15px;
+    font-size:14px;
+    th{
+      padding:10px;
+      font-size:inherit;
+    }
+    td{
+      padding:5px 10px;
+    }
+  }
+  .price{
+    margin:0 -15px;
+    font-size:14px;
   }
 }

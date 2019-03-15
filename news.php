@@ -17,7 +17,7 @@
                 <div class="post-card">
                   <a href="#/" class="post-card__link"></a>
                   <div class="post-card__head">
-                    <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                    <a href="service.php" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                     <span class="post-card__date">21.02.2019</span>
                   </div>
                   <h4 class="post-card__title">Программа Young Professional</h4>
@@ -26,7 +26,7 @@
                 <div class="post-card">
                   <a href="#/" class="post-card__link"></a>
                   <div class="post-card__head">
-                    <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                    <a href="service.php" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                     <span class="post-card__date">19.02.2019</span>
                   </div>
                   <h4 class="post-card__title">Лекционный курс Straumann. Лектор Амириди Дмитрий</h4>
@@ -35,7 +35,7 @@
                 <div class="post-card post-card_color" style="background-image:url(../img/post.jpg)">
                   <a href="#/" class="post-card__link"></a>
                   <div class="post-card__head">
-                    <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                    <a href="service.php" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                     <span class="post-card__date">24.12.2018</span>
                   </div>
                   <h4 class="post-card__title">8-9 апреля 2016</h4>
@@ -44,7 +44,7 @@
                 <div class="post-card">
                   <a href="#/" class="post-card__link"></a>
                   <div class="post-card__head">
-                    <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                    <a href="service.php" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                     <span class="post-card__date">14.12.2018</span>
                   </div>
                   <h4 class="post-card__title">Курс в Сорбонне у проф. Паскаля Валентини ...</h4>
@@ -53,7 +53,7 @@
                 <div class="post-card">
                   <a href="#/" class="post-card__link"></a>
                   <div class="post-card__head">
-                    <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                    <a href="service.php" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                     <span class="post-card__date">21.02.2019</span>
                   </div>
                   <h4 class="post-card__title">Программа Young Professional</h4>
@@ -62,7 +62,7 @@
                 <div class="post-card">
                   <a href="#/" class="post-card__link"></a>
                   <div class="post-card__head">
-                    <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                    <a href="service.php" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                     <span class="post-card__date">19.02.2019</span>
                   </div>
                   <h4 class="post-card__title">Лекционный курс Straumann. Лектор Амириди Дмитрий</h4>

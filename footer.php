@@ -8,15 +8,15 @@
       <div class="footer__nav">
         <h4 class="footer__nav-title">Наши услуги</h3>
         <ul class="footer__menu">
-          <li><a href="#/">Протезирование зубов</a></li>
-          <li><a href="#/">Виниры</a></li>
-          <li><a href="#/">Эстетическая стоматология</a></li>
-          <li><a href="#/">Удаление зубов</a></li>
-          <li><a href="#/">Имплантация</a></li>
-          <li><a href="#/">Ортодонтия</a></li>
-          <li><a href="#/">Отебеливание зубов</a></li>
-          <li><a href="#/">Лечение зубов</a></li>
-          <li><a href="#/">Удаление зубного нерава</a></li>
+          <li><a href="service.php">Протезирование зубов</a></li>
+          <li><a href="service.php">Виниры</a></li>
+          <li><a href="service.php">Эстетическая стоматология</a></li>
+          <li><a href="service.php">Удаление зубов</a></li>
+          <li><a href="service.php">Имплантация</a></li>
+          <li><a href="service.php">Ортодонтия</a></li>
+          <li><a href="service.php">Отебеливание зубов</a></li>
+          <li><a href="service.php">Лечение зубов</a></li>
+          <li><a href="service.php">Удаление зубного нерава</a></li>
         </ul>
       </div>
       <div class="footer__contacts">
@@ -28,8 +28,9 @@
       </div>
       <div class="footer__info">
         <h4 class="footer__info-title">Обратный звонок</h3>
-        <form action="#" class="footer__callback">
-          <input type="text" placeholder="Ваше имя" />
+        <form action="#" class="callback footer__callback">
+          <input class="callback__input" type="text" placeholder="Ваше имя" />
+          <input class="callback__btn" type="submit" value="">
         </form>
         <div class="footer__payment">
           <i class="icon-mastercard"></i>
