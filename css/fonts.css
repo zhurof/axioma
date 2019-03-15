@@ -129,3 +129,15 @@
 .icon-logo:before {
   content: "\e911";
 }
+.icon-estetic:before {
+  content: "\e912";
+}
+.icon-nerve:before {
+  content: "\e913";
+}
+.icon-vinir:before {
+  content: "\e914";
+}
+.icon-prosthetics:before {
+  content: "\e915";
+}

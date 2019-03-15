@@ -178,3 +178,8 @@ if($('#map').length){
     //myMap.behaviors.disable('scrollZoom')
   }	);
 };
+//Категории
+$('.category-card__toggle').click(function(e){
+  e.preventDefault();
+  $(this).parents('.category-card').toggleClass('open');
+})

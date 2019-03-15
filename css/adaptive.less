@@ -9,6 +9,10 @@
     &_small:hover{
       box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1);
     }
+    &_gray:hover{
+      background-color:@orange;
+      color:#000;
+    }
   }
   .file-link{
     transition:all .2s ease;
@@ -142,6 +146,34 @@
     &:hover &__btn{
       background-color:#fff;
       color:#535353;
+    }
+  }
+  .category-card{
+    transition:all .2s ease;
+    &__layout{
+      transition:inherit;
+    }
+    &:hover{
+      background-color:#fff;
+      box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.1);
+    }
+    &_dropdown:hover{
+      box-shadow:none; /*во избежание наложения теней карточки и верхнего слоя */
+    }
+    &:hover &__layout{
+      z-index:1;
+      opacity:1;
+      pointer-events:all;
+    }
+    &:hover &__icon{
+      color:#000;
+    }
+  }
+  .employee-card{
+    transition:all .2s ease;
+    &:hover{
+      background-color:#fff;
+      box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.12);
     }
   }
 }
