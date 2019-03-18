@@ -183,3 +183,11 @@ $('.category-card__toggle').click(function(e){
   e.preventDefault();
   $(this).parents('.category-card').toggleClass('open');
 })
+//меню услуг
+$('.menu .has-children').click(function(e){
+  if(!$(this).find(e.target).length){
+    $(this).toggleClass('open');
+    $(this).children('ul').slideToggle(200);
+    $(this).siblings('.has-children.open').removeClass('open').children('ul').slideUp(200);
+  }
+})

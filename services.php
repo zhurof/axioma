@@ -83,7 +83,8 @@
                 </div>
                 <div class="category-card">
                   <div class="category-card__text">
-                    <h3 class="category-card__title">Эстетическая стоматология</h3>
+                    <!-- По идее, если нет ссылок на услуги, то само название является ссылкой -->
+                    <h3 class="category-card__title"><a href="service.php">Эстетическая стоматология</a></h3>
                   </div>
                   <i class="icon-estetic category-card__icon"></i>
                 </div>
@@ -122,9 +123,9 @@
                 </div>
                 <div class="category-card">
                   <div class="category-card__text">
-                    <h3 class="category-card__title">Удаление зубного нерва</h3>
+                    <h3 class="category-card__title"><a href="service.php">Удаление зубного нерва</a></h3>
                   </div>
-                  <i class="icon- category-card__icon"></i>
+                  <i class="icon-nerve category-card__icon"></i>
                 </div>
               </div>
             </div>
