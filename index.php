@@ -1,4 +1,4 @@
-﻿<?php	include "header.php";?>
+﻿<?php	include "parts/header.php";?>
   <script>
     //Реализовать добавление класса на стороне сервера
     document.querySelector('.header').classList.add('header_trans');
@@ -11,7 +11,7 @@
             <div class="top-block__content">
               <h2 class="top-block__title">Небольшой заголовок в 2 строки</h2>
               <div class="top-block__text">Текст анонса новости, акции, или предстоящего события, желательно в две строки</div>
-              <a href="#/" class="btn top-block__btn">Запись на прием</a>
+              <a href="#" class="btn top-block__btn">Запись на прием</a>
             </div>
           </div>
 		    </div>
@@ -20,7 +20,7 @@
             <div class="top-block__content">
               <h2 class="top-block__title">Небольшой заголовок</h2>
               <div class="top-block__text">Текст анонса новости, акции, или предстоящего события, желательно в две строки</div>
-              <a href="#/" class="btn top-block__btn">Кнопка</a>
+              <a href="#" class="btn top-block__btn">Кнопка</a>
             </div>
           </div>
 		    </div>
@@ -29,7 +29,7 @@
             <div class="top-block__content">
               <h2 class="top-block__title">Небольшой заголовок в 2 строки</h2>
               <div class="top-block__text">Текст анонса новости, акции, или предстоящего события, желательно в две строки</div>
-              <a href="#/" class="btn top-block__btn">Запись на прием</a>
+              <a href="#" class="btn top-block__btn">Запись на прием</a>
             </div>
           </div>
 		    </div>
@@ -38,7 +38,7 @@
             <div class="top-block__content">
               <h2 class="top-block__title">Небольшой заголовок</h2>
               <div class="top-block__text">Текст анонса новости, акции, или предстоящего события, желательно в две строки</div>
-              <a href="#/" class="btn top-block__btn">Кнопка</a>
+              <a href="#" class="btn top-block__btn">Кнопка</a>
             </div>
           </div>
 		    </div>        
@@ -49,7 +49,7 @@
         <div class="about__head">
           <h2 class="about__title">Стоматологическая клиника Axioma Dental</h2>
           <p>Стоматология Axioma Dental в СПб приветствует Вас, уважаемые клиенты!</p>
-          <a href="#/" class="btn about__btn">Подробнее</a>
+          <a href="#" class="btn about__btn">Подробнее</a>
         </div>
         <div class="about__body">
           <p>Хирург-имплантолог Дмитрий Амириди и команда терапевтов и ортопедов проводят качественное лечение зубов любой сложности в комфортных условиях.</p>
@@ -61,27 +61,27 @@
       <div class="wrapper services__wrapper">
         <h2 class="services__title">Наши услуги</h2>
         <div class="box services__box">
-          <a href="#/" class="services__link">
+          <a href="#" class="services__link">
             <span class="services__icon"><i class="icon-treatment"></i></span>
             <span class="services__caption">Лечение зубов</span>
           </a>
-          <a href="#/" class="services__link">
+          <a href="#" class="services__link">
             <span class="services__icon"><i class="icon-whitening"></i></span>
             <span class="services__caption">Отбеливание зубов</span>
           </a>
-          <a href="#/" class="services__link">
+          <a href="#" class="services__link">
             <span class="services__icon"><i class="icon-extraction"></i></span>
             <span class="services__caption">Удаление зубов</span>
           </a>
-          <a href="#/" class="services__link">
+          <a href="#" class="services__link">
             <span class="services__icon"><i class="icon-orthodontics"></i></span>
             <span class="services__caption">Ортодонтия</span>
           </a>
-          <a href="#/" class="services__link">
+          <a href="#" class="services__link">
             <span class="services__icon"><i class="icon-implantation"></i></span>
             <span class="services__caption">Имплантация</span>
           </a>
-          <a href="#/" class="services__link services__link_blend">
+          <a href="#" class="services__link services__link_blend">
             <span class="services__icon services__icon_dash">+</span>
             <span class="services__caption">Все услуги</span>
           </a>
@@ -116,43 +116,43 @@
         <h2 class="employees__title">Наши врачи</h2>
         <div class="employees__slider">
           <div class="employees__slide">
-            <a href="#/" class="employees__link"></a>
+            <a href="#" class="employees__link"></a>
             <img src="img/doctors/1.jpg" class="employees__img" alt="">
             <h4 class="employees__subtitle">Амириди <br>Дмитрий</h4>
             <div class="employees__position">Хирург- имплантолог</div>
-            <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
+            <a href="#" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
           <div class="employees__slide">
-            <a href="#/" class="employees__link"></a>
+            <a href="#" class="employees__link"></a>
             <img src="img/doctors/2.jpg" class="employees__img" alt="">
             <h4 class="employees__subtitle">Кусевицкий <br>Леонид</h4>
             <div class="employees__position">Хирург- имплантолог</div>
-            <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
+            <a href="#" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
           <div class="employees__slide">
-            <a href="#/" class="employees__link"></a>
+            <a href="#" class="employees__link"></a>
             <img src="img/doctors/3.jpg" class="employees__img" alt="">
             <h4 class="employees__subtitle">Маканина <br>Лина</h4>
             <div class="employees__position">Хирург- имплантолог</div>
-            <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
+            <a href="#" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
           <div class="employees__slide">
-            <a href="#/" class="employees__link"></a>
+            <a href="#" class="employees__link"></a>
             <img src="img/doctors/4.jpg" class="employees__img" alt="" data-role="0YfQtdGA0L3QuNC70YzQvdC40YbQsA==">
             <h4 class="employees__subtitle">Амириди <br>Марина</h4>
             <div class="employees__position">Хирург- имплантолог</div>
-            <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
+            <a href="#" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
           <div class="employees__slide">
-            <a href="#/" class="employees__link"></a>
+            <a href="#" class="employees__link"></a>
             <img src="img/doctors/2.jpg" class="employees__img" alt="">
             <h4 class="employees__subtitle">Кусевицкий <br>Леонид</h4>
             <div class="employees__position">Хирург- имплантолог</div>
-            <a href="#/" class="btn btn_small btn_gray employees__btn">Записаться</a>
+            <a href="#" class="btn btn_small btn_gray employees__btn">Записаться</a>
           </div>
         </div>
         <div class="employees__footer">
-          <a href="#/" class="btn">Все врачи</a>
+          <a href="#" class="btn">Все врачи</a>
         </div>
       </div>
     </div>
@@ -207,7 +207,7 @@
                 <h4 class="review-card__title">Игорь Л.</h4>
                 <div class="review-card__field">
                   <span class="review-card__key">Услуга:</span>
-                  <span class="review-card__value"><a href="service.php">Имплантация зубов</a> , <a href="#/">Лечение зубов</a></span>
+                  <span class="review-card__value"><a href="service.php">Имплантация зубов</a> , <a href="#">Лечение зубов</a></span>
                 </div>
               </div>
             </div>
@@ -216,7 +216,7 @@
         <div class="reviews__footer"><a href="reviews.php" class="btn">Все отзывы</a></div>
       </div>
     </div>
-    <?php	include "booking.php";?>
+    <?php	include "parts/booking.php";?>
     <div class="contacts">      
       <div class="contacts__text">
         <h2 class="contacts__title">Наши контакты</h2>
@@ -227,4 +227,4 @@
       <div id="map" class="contacts__map"></div>
     </div>
 	</main>
-<?php	include "footer.php";?>	
+<?php	include "parts/footer.php";?>	

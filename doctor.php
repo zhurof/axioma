@@ -1,4 +1,4 @@
-﻿<?php	include "header.php";?>	
+﻿<?php	include "parts/header.php";?>	
     <div class="page">
       <div class="wrapper">
         <div class="breadcrumbs">
@@ -13,8 +13,8 @@
           <aside class="sidebar page__sidebar">
             <div class="doctor">
               <img class="doctor__img" src="img/doctors/full/1.jpg" alt="">
-              <a href="#/" class="btn btn_block doctor__btn">Записаться</a>
-              <a href="#/" class="btn btn_block btn_thin doctor__btn">Задать вопрос</a>
+              <a href="#" class="btn btn_block doctor__btn">Записаться</a>
+              <a href="#" class="btn btn_block btn_thin doctor__btn">Задать вопрос</a>
             </div>
           </aside>
           <div class="page__content">
@@ -86,7 +86,7 @@
                       <h4 class="review-card__title">Игорь Л.</h4>
                       <div class="review-card__field">
                         <span class="review-card__key">Услуга:</span>
-                        <span class="review-card__value"><a href="service.php">Имплантация зубов</a> , <a href="#/">Лечение зубов</a></span>
+                        <span class="review-card__value"><a href="service.php">Имплантация зубов</a> , <a href="#">Лечение зубов</a></span>
                       </div>
                     </div>
                   </div>
@@ -97,6 +97,6 @@
         </div>
       </div>
     </div>
-    <?php	include "booking.php";?>
+    <?php	include "parts/booking.php";?>
 	</main>
-<?php	include "footer.php";?>	
+<?php	include "parts/footer.php";?>	

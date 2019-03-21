@@ -141,3 +141,15 @@
 .icon-prosthetics:before {
   content: "\e915";
 }
+.icon-brackets:before {
+  content: "\e916";
+}
+.icon-calendar:before {
+  content: "\e917";
+}
+.icon-comments:before {
+  content: "\e918";
+}
+.icon-docs:before {
+  content: "\e919";
+}

@@ -1,4 +1,4 @@
-﻿<?php	include "header.php";?>	
+﻿<?php	include "parts/header.php";?>	
     <div class="page">
       <div class="wrapper">
         <div class="breadcrumbs">
@@ -10,56 +10,7 @@
         </div>
         <h1>Реставрация</h1>
         <div class="page__inner">
-          <aside class="sidebar page__sidebar">
-            <ul class="menu sidebar__menu">
-              <li class="has-children open">
-                <a href="service.php"><i class="icon-treatment menu__icon"></i> Лечение зубов</a>
-                <ul style="display:block;">
-                  <li><a href="#">Лечение кариеса</a></li>
-                  <li class="active"><a href="#">Реставрация</a></li>
-                  <li><a href="#">Профессиональная чистка</a></li>
-                  <li><a href="#">Детская стоматология</a></li>
-                </ul>
-              </li>
-              <li class="has-children">                
-                <a href="service.php"><i class="icon-whitening menu__icon"></i> Отбеливание зубов</a>
-                <ul>
-                  <li><a href="service.php">Подпункт</a></li>
-                  <li><a href="service.php">Подпункт</a></li>
-                </ul>
-              </li>
-              <li class="has-children">
-                <a href="service.php"><i class="icon-orthodontics menu__icon"></i> Ортодонтия</a>
-                <ul>
-                  <li><a href="service.php">Подпункт</a></li>
-                  <li><a href="service.php">Подпункт</a></li>
-                </ul>
-              </li>
-              <li class="has-children">
-                <a href="service.php"><i class="icon-implantation menu__icon"></i> Имплантация</a>
-                <ul>
-                  <li><a href="service.php">Подпункт</a></li>
-                  <li><a href="service.php">Подпункт</a></li>
-                </ul>
-              </li>
-              <li class="has-children">
-                <a href="service.php"><i class="icon-extraction menu__icon"></i> Удаление зубов</a>
-                <ul>
-                  <li><a href="service.php">Удаление зуба мудрости</a></li>
-                  <li><a href="service.php">Удаление ретинированного зуба мудрости</a></li>
-                </ul>
-              </li>
-              <li><a href="service.php"><i class="icon-estetic menu__icon"></i> Эстетическая стоматология</a></li>
-              <li class="has-children">
-                <a href="service.php"><i class="icon-vinir menu__icon"></i> Виниры</a>
-                <ul>
-                  <li><a href="service.php">Подпункт</a></li>
-                  <li><a href="service.php">Подпункт</a></li>
-                </ul>
-              </li>
-              <li><a href="service.php"><i class="icon-prosthetics menu__icon"></i> Протезирование</a></li>
-            </ul>
-          </aside>
+          <? include "parts/service-sidebar.php" ?>
           <div class="page__content page__content_spacer">
             <div class="text-columns">
               <div class="text-columns__item">
@@ -159,28 +110,28 @@
                     <img src="img/doctors/1.jpg" alt="" class="employee-card__img">
                     <h4 class="employee-card__title">Амириди <b>Дмитрий</b></h4>
                     <div class="employee-card__position">Хирург- имплантолог</div>
-                    <a href="#/" class="btn btn_small btn_gray employee-card__btn">Записаться</a>
+                    <a href="#" class="btn btn_small btn_gray employee-card__btn">Записаться</a>
                   </div>
                   <div class="employee-card small">
                     <a href="doctor.php" class="employee-card__link"></a>
                     <img src="img/doctors/2.jpg" alt="" class="employee-card__img">
                     <h4 class="employee-card__title">Кусевицкий <b>Леонид</b></h4>
                     <div class="employee-card__position">д.м.н. стоматолог - ортопед</div>
-                    <a href="#/" class="btn btn_small btn_gray employee-card__btn">Записаться</a>
+                    <a href="#" class="btn btn_small btn_gray employee-card__btn">Записаться</a>
                   </div>
                   <div class="employee-card small">
                     <a href="doctor.php" class="employee-card__link"></a>
                     <img src="img/doctors/3.jpg" alt="" class="employee-card__img">
                     <h4 class="employee-card__title">Маканина <b>Лина</b></h4>
                     <div class="employee-card__position">Врач стоматолог-терапевт</div>
-                    <a href="#/" class="btn btn_small btn_gray employee-card__btn">Записаться</a>
+                    <a href="#" class="btn btn_small btn_gray employee-card__btn">Записаться</a>
                   </div>
                   <div class="employee-card small">
                     <a href="doctor.php" class="employee-card__link"></a>
                     <img src="img/doctors/4.jpg" alt="" class="employee-card__img">
                     <h4 class="employee-card__title">Амириди <b>Марина</b></h4>
                     <div class="employee-card__position">Врач стоматолог-ортопед</div>
-                    <a href="#/" class="btn btn_small btn_gray employee-card__btn">Записаться</a>
+                    <a href="#" class="btn btn_small btn_gray employee-card__btn">Записаться</a>
                   </div>
                 </div>
               </div>
@@ -189,6 +140,6 @@
         </div>
       </div>
     </div>
-    <?php	include "booking.php";?>
+    <?php	include "parts/booking.php";?>
 	</main>
-<?php	include "footer.php";?>	
+<?php	include "parts/footer.php";?>	

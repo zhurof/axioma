@@ -11,6 +11,7 @@ function changeTemplate(){
     $('.header__menu ul').css('display','');
     $('.header__menu .has-children.open').removeClass('open');
   }
+  gallerySlider();
 }
 $(document).ready(changeTemplate);
 $(window).resize(changeTemplate);
@@ -46,7 +47,7 @@ $('.header__menu .has-children').click(function(e){
   if(!$(this).find(e.target).length && is_mobile()){
     $(this).toggleClass('open');
     $(this).children('ul').slideToggle(200);
-    $(this).siblings('.has-children.open').removeClass('open').children('ul').slideUp(200);
+    //$(this).siblings('.has-children.open').removeClass('open').children('ul').slideUp(200);
   }
 })
 //галерея
@@ -136,6 +137,7 @@ $('.view__body').slick({
 //Карта
 if($('#map').length){
 	ymaps.ready(function(){
+    //Метка на карте ставится исходя из адреса в элементе #address, либо в атрибуте data-address тега карты, либо организация переезжает в Казахстан.
     var address = $('#address').text() || $('#map').data('address') ||'Караганда',
         centerCoords = [];
         
@@ -189,5 +191,113 @@ $('.menu .has-children').click(function(e){
     $(this).toggleClass('open');
     $(this).children('ul').slideToggle(200);
     $(this).siblings('.has-children.open').removeClass('open').children('ul').slideUp(200);
+  }
+})
+//Модальные окна
+function openModal(modalId, initiator){  
+  var scrollWidth = window.innerWidth - document.body.clientWidth;//Ширина полосы прокрутки
+  
+	$('.modal-wrapper').children().unwrap();
+	if(!$('#'+modalId).length){
+		alert('Ошибка вызова модального окна');
+		return false;
+	}
+	$('#'+modalId).trigger('beforeShow',initiator).wrap('<div class="modal-wrapper" style="display:none" />');
+	$('.modal-wrapper').fadeIn(400,function(){
+    $('#'+modalId).trigger('afterShow',initiator);
+  });
+	
+	if(scrollWidth){
+		$('html').css('padding-right',scrollWidth);
+		$('body').css('overflow-y','hidden');
+		$('.header').css('width',window.innerWidth  - scrollWidth);
+	}
+}
+function closeModal(){
+	$('.modal-wrapper').fadeOut(200, function(){
+		$('html').css('padding-right','');
+		$('body').css('overflow-y','');
+    $('.header').css('width','');
+	});
+}
+$(document).on('click', '[data-modal]', function(e){
+	e.preventDefault();
+	var modal = $(this).data('modal');
+	openModal(modal,e.target);
+})
+$(document).on('click', '.modal__close', closeModal);
+
+$(document).on('mousedown', '.modal-wrapper', function(e){
+	if(!$('.modal').is(e.target) && $('.modal').has(e.target).length === 0){
+		closeModal();
+	}
+})
+$(document).keydown(function(e){
+	//Закрытие окна на Esc
+	if(e.which == 27){
+		closeModal();
+	}
+});
+//Пошаговая форма написания отзыва
+$('#review-form').on('beforeShow',function(e,initiator){
+  $(this).find('.review-form')[0].reset();
+  $(this).find('.review-form__step').css('display','');
+})
+$('.review-form__next,.review-form .g-recaptcha').click(function(e){
+  e.preventDefault();
+  var step = $(this).parents('.review-form__step');
+  if('reportValidity' in HTMLInputElement.prototype){
+    step.find('input,textarea,select').each(function(){
+      this.reportValidity();
+    });
+  }
+  if(!step.find('input:invalid,textarea:invalid,select:invalid').length){
+    step.hide().next().show();
+  }
+})
+//Якоря
+$('a[href^="#"]').click(function(e){
+  var hash = this.hash;
+  if($(hash).length && $(hash).is(':visible')){
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top - 120
+    }, 400);
+  }
+})
+//Сворачиваем галлерею в слайдеры
+function gallerySlider(){
+  if($(window).width()<768){
+    $('.gallery').not('.slick-initialised').slick({
+      variableWidth:true,
+      centerMode:true,
+      arrows:false,
+      centerPadding:0,
+      slide:'.gallery__item',
+      mobileFirst:true,
+      respoinsive:[
+        {
+          breakpoint:768,
+          settings:'unslick'
+        }
+      ]
+    })
+  }
+}
+//Расписание
+var worktime = {//рабочее время (часы)
+  min:10,
+  max:21
+}
+$('.schedule__current').each(function(){
+  var curMin = $(this).find('.schedule__time').eq(0).text().substring(0,2) || 0,
+      curMax = $(this).find('.schedule__time').eq(1).text().substring(0,2) || 0,
+      part = (curMax - curMin) / (worktime.max - worktime.min);
+  if(part){
+    var spacer = (curMin - worktime.min)*100 / (worktime.max-worktime.min) + '%';
+    $(this).css({
+      'width' : part*100+'%',
+      'margin-left':spacer
+    });
   }
 })

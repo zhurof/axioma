@@ -191,6 +191,26 @@
       display:none;
     }
   }
+  .reviews-block{
+    &__links{
+      a{
+        transition:all .2s ease;
+        &:hover{
+          color:@orange;
+          text-decoration:none;
+        }
+      }
+    }
+  }
+  .page-nav{
+    a{
+      transition:all .2s ease;
+      &:hover{
+        color:@orange;
+        text-decoration:none;
+      }
+    }
+  }
 }
 
 @media(max-width:1199px){
@@ -255,6 +275,9 @@
     font-size:14px;
     &__title{
       font-size:16px;
+    }
+    &_full{
+      width:100%;
     }
   }
   .simile{
@@ -570,6 +593,37 @@
       margin:0 15px 30px;
     }
   }
+  .contacts-block{
+    display:block;
+    &__text{
+      width:auto;
+      padding:40px 20px;
+    }
+    &__map{
+      width:auto;
+      min-height:0;
+      height:350px;
+    }
+  }
+  .message-block{
+    &__footer{
+      display:block;
+      text-align:center;
+    }
+    &__notation{
+      margin:0 0 1em;
+      padding:0;
+      font-size:16px;
+    }
+  }
+  .review-form{
+    &__box{
+      justify-content:space-between;
+    }
+  }
+  .page-nav{
+    display:none;
+  }
   .footer{
     padding:45px 0;
   }
@@ -577,6 +631,12 @@
 @media(max-width:767px){
   h1{
     margin:0 0 1em;
+  }
+  .modal{
+    &__close{
+      top:14px;
+      right:14px;
+    }
   }
   .header{
     &__midline-inner{
@@ -632,16 +692,32 @@
       padding:30px 15px;
     }
   }
+  .about-page{
+    .text-block .btn,
+    .text-columns .btn{
+      display:block;
+      width:min-content;
+      margin:0 auto;
+    }
+    p{
+      margin:0 0 2em;
+      &:last-child{
+        margin:0;
+      }
+    }
+  }
   .text-columns{
     display:block;
     &__item{
       width:auto;
+      margin:0 0 2em;
     }
     br{
       display:none;
     }
   }
   .text-block{
+    margin:0 0 2em;
     br{
       display:none;
     }
@@ -657,6 +733,15 @@
     }
     td{
       padding:5px 15px;
+    }
+  }
+  .gallery{
+    margin:0 -15px 1.6em;
+    &__item{
+      margin:0 15px;
+    }
+    &__trigger{
+      display:none;
     }
   }
   .view{
@@ -688,13 +773,37 @@
   .price{
     padding:15px;
     font-size:16px;
+    &_trans{
+      padding:0;
+    }
     &__key,
     &__value{
       transform:translateY(5px);
     }
   }
+  .reviews-block{
+    &__head{
+      display:block;
+      text-align:center;
+    }
+    &__links{
+      margin:0 0 2em;
+      a{
+        margin:.5em;
+      }
+    }
+  }
+  .review-form{
+    &__step{
+      padding:40px 20px;
+      &_final{
+        padding:49px 50% 40px 30px;
+      }
+    }
+  }
   .footer{
     padding:25px 0;
+    text-align:center;
     &__wrapper{
       display:block;
     }
@@ -735,6 +844,15 @@
   }
   h3{
     font-size:21px;
+  }
+  .double-field{
+    display:block;
+    margin:0;
+    input{
+      display:block;
+      width:100%;
+      margin:0 0 26px;
+    }
   }
   .header{
     &__midline{
@@ -807,5 +925,56 @@
   .price{
     margin:0 -15px;
     font-size:14px;
-  }  
+    &_trans{
+      margin:0;
+    }
+  }
+  .review-form{
+    &__step{
+      padding:40px 15px;
+      min-height:0;
+      &_final{
+        background:none;
+      }
+    }
+    &__box{
+      display:block;
+    }
+    &__field{
+      width:100%;
+    }
+  }
+  .prices-block{
+    &__title{
+      font-size:20px;
+    }
+    &__item{
+      margin:0 0 40px;
+    }
+  }
+  .schedule{
+    &__head{
+      display:block;
+      text-align:center;
+    }
+    &__person{
+      display:block;
+      margin:0 0 10px;
+      &-img{
+        margin:0 auto 10px;
+      }
+    }
+    &__body{
+      padding:20px 15px 10px;
+    }
+    &__item{
+      &_disabled{
+        min-height:18px;
+      }
+    }
+    &__time{
+      font-size:11px;
+      padding:0 4px;
+    }
+  }
 }

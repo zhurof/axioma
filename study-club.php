@@ -1,5 +1,5 @@
-﻿<?php	include "header.php";?>	
-    <div class="page">
+﻿<?php	include "parts/header.php";?>	
+    <div class="page about-page">
       <div class="wrapper">
         <div class="breadcrumbs">
           <a href="/">Главная</a>
@@ -10,7 +10,7 @@
         </div>
         <h1>ITI Study Club</h1>
         <div class="page__inner">
-          <?php	include "aside.php";?>
+          <?php	include "parts/aside.php";?>
           <div class="page__content">
             <div class="text-columns">
               <div class="text-columns__item">
@@ -29,36 +29,36 @@
                 <div class="news">
                 <div class="box news__box">
                   <div class="post-card post-card_small">
-                    <a href="#/" class="post-card__link"></a>
+                    <a href="#" class="post-card__link"></a>
                     <div class="post-card__head">
-                      <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                      <a href="#" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                       <span class="post-card__date">21.02.2019</span>
                     </div>
                     <h4 class="post-card__title">Название обучающего курса 1</h4>
                     <div class="post-card__text">Небольшой текст анонса данного курса, с кратким описанием, лекторами, желательно в три или четыре строки</div>
                   </div>
                   <div class="post-card post-card_small">
-                    <a href="#/" class="post-card__link"></a>
+                    <a href="#" class="post-card__link"></a>
                     <div class="post-card__head">
-                      <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                      <a href="#" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                       <span class="post-card__date">21.02.2019</span>
                     </div>
                     <h4 class="post-card__title">Название обучающего курса 2</h4>
                     <div class="post-card__text">Небольшой текст анонса данного курса, с кратким описанием, лекторами, желательно в три или четыре строки</div>
                   </div>
                   <div class="post-card post-card_small">
-                    <a href="#/" class="post-card__link"></a>
+                    <a href="#" class="post-card__link"></a>
                     <div class="post-card__head">
-                      <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                      <a href="#" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                       <span class="post-card__date">21.02.2019</span>
                     </div>
                     <h4 class="post-card__title">Название обучающего курса 3</h4>
                     <div class="post-card__text">Небольшой текст анонса данного курса, с кратким описанием, лекторами, желательно в три или четыре строки</div>
                   </div>
                   <div class="post-card post-card_small">
-                    <a href="#/" class="post-card__link"></a>
+                    <a href="#" class="post-card__link"></a>
                     <div class="post-card__head">
-                      <a href="#/" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
+                      <a href="#" class="post-card__category"><i class="icon-orthodontics"></i> <span>Ортодонтия</span></a>
                       <span class="post-card__date">21.02.2019</span>
                     </div>
                     <h4 class="post-card__title">Название обучающего курса 4</h4>
@@ -66,11 +66,11 @@
                   </div>
                 </div>
                 <div class="pagination">
-                  <a href="#/">1</a>
-                  <a href="#/" class="active">2</a>
-                  <a href="#/">3</a>
+                  <a href="#">1</a>
+                  <a href="#" class="active">2</a>
+                  <a href="#">3</a>
                   <span>...</span>
-                  <a href="#/">7</a>
+                  <a href="#">7</a>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@
               <div class="text-columns__item">
                 <h2>Мы работаем под <br>девизом «просто мы делаем больше» (“simplydoing more”) <br>вот уже более 50 лет.</h2>
                 <p>&nbsp;</p>
-                <a href="#/" class="btn">Записаться прямо сейчас</a>
+                <a href="#" class="btn">Записаться прямо сейчас</a>
               </div>
               <div class="text-columns__item">
                 <p>В 1954 году, используя опыт, накопленный в часовом деле, Райнхард Штрауманн основал компанию Dr. Ing. R. Straumann Research InstituteAG, которая первоначально занималась исследованиями в области металлургии.</p>
@@ -112,6 +112,6 @@
         </div>
       </div>
     </div>
-    <?php	include "booking.php";?>
+    <?php	include "parts/booking.php";?>
 	</main>
-<?php	include "footer.php";?>	
+<?php	include "parts/footer.php";?>	

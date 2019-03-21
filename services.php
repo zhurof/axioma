@@ -1,4 +1,4 @@
-﻿<?php	include "header.php";?>	
+﻿<?php	include "parts/header.php";?>	
     <div class="page">
       <div class="wrapper">
         <div class="breadcrumbs">
@@ -82,9 +82,10 @@
                   <i class="icon-extraction category-card__icon"></i>
                 </div>
                 <div class="category-card">
-                  <div class="category-card__text">
-                    <!-- По идее, если нет ссылок на услуги, то само название является ссылкой -->
-                    <h3 class="category-card__title"><a href="service.php">Эстетическая стоматология</a></h3>
+                  <!-- По идее, если нет ссылок на услуги, то сама карточка становится ссылкой -->
+                  <a href="service.php" class="category-card__link"></a>
+                  <div class="category-card__text">                    
+                    <h3 class="category-card__title">Эстетическая стоматология</h3>
                   </div>
                   <i class="icon-estetic category-card__icon"></i>
                 </div>
@@ -122,8 +123,9 @@
                   <i class="icon-prosthetics category-card__icon"></i>
                 </div>
                 <div class="category-card">
+                  <a href="service.php" class="category-card__link"></a>
                   <div class="category-card__text">
-                    <h3 class="category-card__title"><a href="service.php">Удаление зубного нерва</a></h3>
+                    <h3 class="category-card__title">Удаление зубного нерва</h3>
                   </div>
                   <i class="icon-nerve category-card__icon"></i>
                 </div>
@@ -133,6 +135,6 @@
         </div>
       </div>
     </div>
-    <?php	include "booking.php";?>
+    <?php	include "parts/booking.php";?>
 	</main>
-<?php	include "footer.php";?>	
+<?php	include "parts/footer.php";?>	

@@ -1,5 +1,5 @@
-﻿<?php	include "header.php";?>	
-    <div class="page">
+﻿<?php	include "parts/header.php";?>	
+    <div class="page about-page">
       <div class="wrapper">
         <div class="breadcrumbs">
           <a href="/">Главная</a>
@@ -8,7 +8,7 @@
         </div>
         <h1>О клинике</h1>
         <div class="page__inner">
-          <?php	include "aside.php";?>
+          <?php	include "parts/aside.php";?>
           <div class="page__content page__content_spacer">
             <h2>Стоматология Аксиома <br>Дентал</h2>
             <div class="text-columns">
@@ -52,6 +52,6 @@
         </div>
       </div>
     </div>
-    <?php	include "booking.php";?>
+    <?php	include "parts/booking.php";?>
 	</main>
-<?php	include "footer.php";?>	
+<?php	include "parts/footer.php";?>	

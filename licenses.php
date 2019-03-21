@@ -1,5 +1,5 @@
-﻿<?php	include "header.php";?>	
-    <div class="page">
+﻿<?php	include "parts/header.php";?>	
+    <div class="page about-page">
       <div class="wrapper">
         <div class="breadcrumbs">
           <a href="/">Главная</a>
@@ -10,7 +10,7 @@
         </div>
         <h1>Лицензии и сертификаты</h1>
         <div class="page__inner">
-          <?php	include "aside.php";?>
+          <?php	include "parts/aside.php";?>
           <div class="page__content page__content_spacer">
             <article class="text-block">
               <p>Клиника «Axioma Dental» осуществляет свою деятельность согласно Законодательству РФ. Лицензия на осуществление медицинской деятельности <br>№ 78-01-003452 выдана 5 апреля 2013 года.</p>
@@ -21,7 +21,7 @@
               </div>
             </article>
             <article class="text-block">
-              <h3>Сертификаты <a href="#/">Маканиной Лины</a>:</h3>
+              <h3>Сертификаты <a href="#">Маканиной Лины</a>:</h3>
               <div class="gallery">
                 <a href="img/license/full/4.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/4.jpg" alt=""></a>
                 <a href="img/license/full/5.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/5.jpg" alt=""></a>
@@ -33,7 +33,7 @@
               </div>
             </article>
             <article class="text-block">
-              <h3>Сертификаты <a href="#/">Дмитрия Амириди</a>:</h3>
+              <h3>Сертификаты <a href="#">Дмитрия Амириди</a>:</h3>
               <div class="gallery">
                 <a href="img/license/full/9.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/9.jpg" alt=""></a>
                 <a href="img/license/full/10.jpg" data-fancybox="gallery1" class="gallery__item"><img src="img/license/10.jpg" alt=""></a>
@@ -58,6 +58,6 @@
         </div>
       </div>
     </div>
-    <?php	include "booking.php";?>
+    <?php	include "parts/booking.php";?>
 	</main>
-<?php	include "footer.php";?>	
+<?php	include "parts/footer.php";?>	

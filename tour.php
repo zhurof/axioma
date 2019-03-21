@@ -1,5 +1,5 @@
-﻿<?php	include "header.php";?>	
-    <div class="page">
+﻿<?php	include "parts/header.php";?>	
+    <div class="page about-page">
       <div class="wrapper">
         <div class="breadcrumbs">
           <a href="/">Главная</a>
@@ -10,7 +10,7 @@
         </div>
         <h1>Виртуальный тур</h1>
         <div class="page__inner">
-          <?php	include "aside.php";?>
+          <?php	include "parts/aside.php";?>
           <div class="page__content page__content_spacer">
             <article class="text-block">
               <p>Компания Google побывала у нас в гостях и подготовила видеотур по клинике. <br>Это поможет Вам заранее познакомиться со стоматологией и чувствовать себя максимально уверенно при первом посещении. <br>Посетите Axioma Dental виртуально прямо сейчас! Добро пожаловать!</p>
@@ -20,6 +20,6 @@
         </div>
       </div>
     </div>
-    <?php	include "booking.php";?>
+    <?php	include "parts/booking.php";?>
 	</main>
-<?php	include "footer.php";?>	
+<?php	include "parts/footer.php";?>	

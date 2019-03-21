@@ -25,8 +25,8 @@
           <div class="lang header__lang">
             <div class="lang__title">Language</div>
             <ul class="lang__list">
-              <li><a href="#/"><img src="img/icons/uk.svg" alt="" /> English</a></li>
-              <li class="active"><a href="#/"><img src="img/icons/russia.svg" alt="" /> Русский</a></li>
+              <li><a href="#"><img src="img/icons/uk.svg" alt="" /> English</a></li>
+              <li class="active"><a href="#"><img src="img/icons/russia.svg" alt="" /> Русский</a></li>
             </ul>
           </div>
         </div>
@@ -52,16 +52,16 @@
           </div>
           <div class="header__info">
             <ul class="header__social">
-              <li><a href="#/"><i class="fa-instagram"></i></a></li>
-              <li><a href="#/"><i class="fa-facebook"></i></a></li>
-              <li><a href="#/"><i class="fa-vk"></i></a></li>
-              <li><a href="#/">WhatsApp</a></li>
-              <li><a href="#/">Viber</a></li>
+              <li><a href="#"><i class="fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa-vk"></i></a></li>
+              <li><a href="#">WhatsApp</a></li>
+              <li><a href="#">Viber</a></li>
             </ul>            
-            <a href="#/" class="header__callback">Заказать звонок</a>
+            <a href="#" class="header__callback">Заказать звонок</a>
           </div>
           <span class="header__search-btn"></span>
-          <a href="#/" class="btn header__btn">Запись на прием</a>
+          <a href="#" class="btn header__btn">Запись на прием</a>
           <form class="header__mobile-search">
             <input type="search" />
           </form>
@@ -143,7 +143,15 @@
           <li><a href="actions.php">Акции</a></li>
           <li><a href="prices.php">Цены</a></li>
           <li><a href="reviews.php">Отзывы</a></li>
-          <li><a href="to-patients.php">Пациентам</a></li>
+          <li class="has-children">
+            <a href="to-patients.php">Пациентам</a>
+            <ul>
+              <li><a href="faq.php">Вопрос - Ответ</a></li>
+              <li><a href="blog.php">Статьи</a></li>
+              <li><a href="schedule.php">Расписание</a></li>
+              <li><a href="rules.php">Правила внутреннего распорядка</a></li>
+            </ul>
+          </li>
           <li><a href="contacts.php">Контакты</a></li>
         </ul>
       </div>

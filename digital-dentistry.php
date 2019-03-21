@@ -1,5 +1,5 @@
-﻿<?php	include "header.php";?>	
-    <div class="page">
+﻿<?php	include "parts/header.php";?>	
+    <div class="page about-page">
       <div class="wrapper">
         <div class="breadcrumbs">
           <a href="/">Главная</a>
@@ -10,7 +10,7 @@
         </div>
         <h1>Цифровая стоматология</h1>
         <div class="page__inner">
-          <?php	include "aside.php";?>
+          <?php	include "parts/aside.php";?>
           <div class="page__content">
             <div class="text-columns">
               <div class="text-columns__item">
@@ -96,7 +96,7 @@
             </article>
             <article class="text-block">
               <h2>Цифровая клиника. Из чего она состоит?</h2>
-              <ol>
+              <ol class="ol_central">
                 <li>Цифровой интраоральный сканер. С его помощью доктор сканирует ротовую полость. Сканирование заменило процедуру снятия слепков. Теперь мы делаем виртуальные слепки.</li>
                 <li>Компьютерный дизайн улыбки. Программа точнейшим образом рассчитает реставрации (виниры, коронки, вкладки). Новые зубы будут идеально подходить вам.</li>
                 <li>3D-принтер. Мы изготовим демонстрационную форму, и вы сможете примерить новые зубы. 3D-принтер напечатает демо-форму без искажений и быстро (восковую модель пришлось бы ждать несколько дней).</li>
@@ -138,6 +138,6 @@
         </div>
       </div>
     </div>
-    <?php	include "booking.php";?>
+    <?php	include "parts/booking.php";?>
 	</main>
-<?php	include "footer.php";?>	
+<?php	include "parts/footer.php";?>	
