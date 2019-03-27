@@ -643,7 +643,6 @@
     }
     &__map{
       width:auto;
-      min-height:0;
       height:auto;
       padding:0;
     }
@@ -651,6 +650,7 @@
       position:relative;
     }
     &__ymaps{
+      min-height:0;
       height:350px;
     }
     &__layout{
@@ -1072,6 +1072,11 @@
     }
   }
   .contacts-panel{
-    padding:0;
+    &__nav{
+      padding:14px 0 13px;
+    }
+    &__item{
+      padding:22.4px 0;
+    }
   }
 }

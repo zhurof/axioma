@@ -62,24 +62,20 @@
       <div class="contacts-panel__item">
         <div class="contacts-panel__inner">
           <span class="contacts-panel__back">Назад</span>
-          <div class="contacts-panel__content">
-            <a href="tel:78122722125">+7 (812) 272-21-25</a>
-            <a href="rel:78122722125">+7 (812) 272-21-25</a>
-          </div>
+          <a href="tel:78122722125">+7 (812) 272-21-25</a>
+          <a href="rel:78122722125">+7 (812) 272-21-25</a>
         </div>        
       </div>
       <div class="contacts-panel__item">
         <div class="contacts-panel__inner">
           <span class="contacts-panel__back">Назад</span>
-          <div class="contacts-panel__content">
-            <div class="contacts-panel__social">
-              <a href="#" class="fa-instagram"></a>
-              <a href="#" class="fa-facebook"></a>
-              <a href="#" class="fa-vk"></a>
-              <a href="#">WhatsApp</a>
-              <a href="#">Viber</a>
-            </div>
-          </div>
+          <span class="contacts-panel__social">
+            <a href="#" class="fa-instagram"></a>
+            <a href="#" class="fa-facebook"></a>
+            <a href="#" class="fa-vk"></a>
+            <a href="#" class="">WhatsApp</a>
+            <a href="#" class="">Viber</a>
+          </span>
         </div>        
       </div>
     </div>
