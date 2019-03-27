@@ -211,6 +211,29 @@
       }
     }
   }
+  .faq{
+    &__links{
+      a{
+        transition:all .2s ease;
+        &:hover{
+          color:@orange;
+          text-decoration:none;
+        }
+      }
+    }
+  }
+  .action-card{
+    transition:all .2s ease;
+    &:hover{
+      box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.15);
+    }
+    &__link{
+      transition:inherit;
+      &:hover{
+        border-color:transparent;
+      }
+    }
+  }
 }
 
 @media(max-width:1199px){
@@ -294,6 +317,11 @@
       font-size:16px;
     }
   }
+  .contacts-block{
+    &__btn{
+      min-width:135px;
+    }
+  }
 }
 @media(max-width:991px){
   .box{
@@ -310,7 +338,21 @@
       display:none;
     }
     &__phones{
-      display:none;
+      font-size:0;
+      padding:4px;
+      color:#9ba5aa;
+      margin:0 0 0 10px;
+      &:before{
+        content:'\e909';
+        position:static;
+        opacity:1;
+      }
+      a{
+        .pos();
+        &:nth-child(n+2){
+          display:none;
+        }
+      }
     }
     &__info{
       display:none;
@@ -438,7 +480,7 @@
   }
 	.top-block{
     &__slide{
-      padding:190px 0 120px;
+      padding:120px 0 120px;
     }
     &__dots{
       padding:0 15px;
@@ -602,6 +644,18 @@
     &__map{
       width:auto;
       min-height:0;
+      height:auto;
+      padding:0;
+    }
+    &__nav{
+      position:relative;
+    }
+    &__ymaps{
+      height:350px;
+    }
+    &__layout{
+      top:auto;
+      bottom:0;
       height:350px;
     }
   }
@@ -616,7 +670,7 @@
       font-size:16px;
     }
   }
-  .review-form{
+  .step-form{
     &__box{
       justify-content:space-between;
     }
@@ -626,6 +680,11 @@
   }
   .footer{
     padding:45px 0;
+  }  
+}
+@media(max-width:991px) and (orientation: portrait){
+  .contacts-panel{
+    display:block;
   }
 }
 @media(max-width:767px){
@@ -651,13 +710,16 @@
       min-width:0;
       margin:0 auto;
     }
+    &__phones{
+      order:1;
+    }
     &__menu-btn{
-      order:2;
+      order:3;
       border-radius:0 10px 0 0;
       margin:0;
     }
     &__search-btn{
-      order:1;
+      order:2;
       line-height:76px;
       margin:0;
       width:75px;
@@ -793,12 +855,34 @@
       }
     }
   }
-  .review-form{
+  .step-form{
     &__step{
       padding:40px 20px;
       &_final{
         padding:49px 50% 40px 30px;
       }
+    }
+  }
+  .faq{
+    &__head{
+      display:block;
+      text-align:center;
+    }
+    &__links{
+      margin:0 0 2em;
+      a{
+        margin:.5em;
+      }
+    }
+  }
+  .action-card{
+    display:block;
+    &__pic{
+      display:none;
+    }
+    &__text{
+      max-width:100%;
+      padding:30px 20px;
     }
   }
   .footer{
@@ -929,7 +1013,7 @@
       margin:0;
     }
   }
-  .review-form{
+  .step-form{
     &__step{
       padding:40px 15px;
       min-height:0;
@@ -976,5 +1060,18 @@
       font-size:11px;
       padding:0 4px;
     }
+  }
+  .contacts-block{
+    &__nav{
+      padding:10px;
+    }
+    &__btn{
+      display:block;
+      min-width:0;
+      width:100%;
+    }
+  }
+  .contacts-panel{
+    padding:0;
   }
 }

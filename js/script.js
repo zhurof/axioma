@@ -5,9 +5,11 @@
 function changeTemplate(){
   if(is_mobile()){
     $(window).off('load scroll',changeHeader);
+    $(window).on('load scroll',toggleContactsPanel);
     $('.header').removeClass('fixed');
   }else{
     $(window).on('load scroll',changeHeader);
+    $(window).off('load scroll',toggleContactsPanel);
     $('.header__menu ul').css('display','');
     $('.header__menu .has-children.open').removeClass('open');
   }
@@ -135,51 +137,87 @@ $('.view__body').slick({
 })
 
 //Карта
-if($('#map').length){
-	ymaps.ready(function(){
-    //Метка на карте ставится исходя из адреса в элементе #address, либо в атрибуте data-address тега карты, либо организация переезжает в Казахстан.
-    var address = $('#address').text() || $('#map').data('address') ||'Караганда',
-        centerCoords = [];
-        
-    ymaps.geocode(address, {
-        results: 1
-    }).then(function (res) {
-        // Выбираем первый результат геокодирования.
-        var firstGeoObject = res.geoObjects.get(0),
-            // Координаты геообъекта.
-            coords = firstGeoObject.geometry.getCoordinates(),
-            // Область видимости геообъекта.
-            bounds = firstGeoObject.properties.get('boundedBy');
-            
-            firstGeoObject.options.set('preset', 'islands#darkBlueDotIconWithCaption');
-            // Получаем строку с адресом и выводим в иконке геообъекта.
-            firstGeoObject.properties.set('iconCaption', firstGeoObject.getAddressLine());
-            
-            //Смещенные координаты для центра карты
-            centerCoords[0] = coords[0];
-            centerCoords[1] = coords[1] + 0.00025;
-            
-            var myMap = new ymaps.Map("map", {
-              center: centerCoords,
-              zoom: 16.5,
-              controls: []
+var coords, route; //глобальные переменные для дальнейшей работы в функции построения маршрута
+$(document).ready(function(){
+  if($('#map').length){
+    ymaps.ready(function(){
+      //Метка на карте ставится исходя из адреса в элементе #address, либо в атрибуте data-address тега карты, либо организация переезжает в Казахстан.
+      var address = $('#address').text() || $('#map').data('address') ||'Караганда',
+          centerCoords = [];
+          
+      ymaps.geocode(address, {
+          results: 1
+      }).then(function (res) {
+          // Выбираем первый результат геокодирования.
+          var firstGeoObject = res.geoObjects.get(0),            
+              // Область видимости геообъекта.
+              bounds = firstGeoObject.properties.get('boundedBy');
+              
+              firstGeoObject.options.set('preset', 'islands#darkBlueDotIconWithCaption');
+              // Получаем строку с адресом и выводим в иконке геообъекта.
+              firstGeoObject.properties.set('iconCaption', firstGeoObject.getAddressLine());
+              
+              // Координаты геообъекта пишем в глобальную переменную для дальнейшей работы
+              coords = firstGeoObject.geometry.getCoordinates();
+              //Смещенные координаты для центра карты
+              centerCoords[0] = coords[0];
+              centerCoords[1] = coords[1] + 0.00025;
+              
+              var myMap = new ymaps.Map("map", {
+                center: centerCoords,
+                zoom: 16.5,
+                controls: []
+              });
+                  
+          myPlacemark = new ymaps.Placemark(coords, 
+            {
+              hintContent: 'Клиника',
+              balloonContent: ''
+            },{
+              preset: 'islands#icon',
+              iconColor: '#f8aa55'
             });
-                
-        myPlacemark = new ymaps.Placemark(coords, 
-          {
-            hintContent: 'Клиника',
-            balloonContent: ''
-          },{
-            preset: 'islands#icon',
-            iconColor: '#f8aa55'
-          });
-          
-          
-          myMap.geoObjects.add(myPlacemark);
-    });		
-    //myMap.behaviors.disable('scrollZoom')
-  }	);
-};
+            
+            
+            myMap.geoObjects.add(myPlacemark);
+            //Навешиваем обработчик на клик для кнопок построения маршрута.
+            $('.contacts-block__btn[data-point]').on('click',function(){
+              if(!$(this).is('.active')){
+                $('.contacts-block__layout').removeClass('active');
+                $(this).addClass('active').siblings().removeClass('active');
+                var point = $(this).attr('data-point');
+                makeRoute(myMap,point);
+              }else {
+                $(this).removeClass('active');
+                if(route) myMap.geoObjects.remove(route);          
+              }            
+            });
+      });		
+      //myMap.behaviors.disable('scrollZoom')
+    }	);
+  };
+})
+function makeRoute(map,point){
+  if(map && route){
+    map.geoObjects.remove(route);//Удаляем старый маршрут
+  }  
+  //и создаём новый
+  route = new ymaps.multiRouter.MultiRoute({
+      referencePoints: [point,coords],
+      params: {
+        routingMode: 'pedestrian' //ставим пешеходную маршрутизацию
+      }
+  }, {
+      // Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
+      boundsAutoApply: true
+  });
+  // Добавляем мультимаршрут на карту.
+  map.geoObjects.add(route);
+}
+$('.contacts-block__btn').not('[data-point]').click(function(){
+  $(this).toggleClass('active').siblings('[data-point].active').trigger('click');
+  $('.contacts-block__layout').toggleClass('active');
+})
 //Категории
 $('.category-card__toggle').click(function(e){
   e.preventDefault();
@@ -238,15 +276,15 @@ $(document).keydown(function(e){
 		closeModal();
 	}
 });
-//Пошаговая форма написания отзыва
-$('#review-form').on('beforeShow',function(e,initiator){
-  $(this).find('.review-form')[0].reset();
-  $(this).find('.review-form__step').css('display','');
+//Пошаговая форма в модальном окне
+$('.modal').on('beforeShow',function(e,initiator){
+  $(this).find('.step-form')[0].reset();
+  $(this).find('.step-form__step').css('display','');
 })
-$('.review-form__next,.review-form .g-recaptcha').click(function(e){
+$('.step-form__next,.step-form .g-recaptcha').click(function(e){
   e.preventDefault();
-  var step = $(this).parents('.review-form__step');
-  if('reportValidity' in HTMLInputElement.prototype){
+  var step = $(this).parents('.step-form__step');
+  if('reportValidity' in HTMLInputElement.prototype){//проверка на наличие метода reportValidity, чтобы во всяких IE не выкидывало ошибку
     step.find('input,textarea,select').each(function(){
       this.reportValidity();
     });
@@ -301,3 +339,20 @@ $('.schedule__current').each(function(){
     });
   }
 })
+//панель контактов
+$('.contacts-panel__btn').click(function(){
+  var index = $(this).index();
+  $('.contacts-panel__nav').hide();
+  $('.contacts-panel__item').eq(index).fadeIn(200);
+})
+$('.contacts-panel__back').click(function(){
+  $('.contacts-panel__nav').fadeIn(200);
+  $(this).parents('.contacts-panel__item').hide();
+})
+function toggleContactsPanel(){
+  if(+$(window).scrollTop() + +$(window).height() >= $(document).height()-70){
+    $('.contacts-panel').addClass('hidden');
+  }else{
+    $('.contacts-panel.hidden').removeClass('hidden');
+  }
+}

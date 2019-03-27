@@ -34,7 +34,19 @@
                   <p>Пн - Сб / 10:00 - 21:00 <br>Вс / 10:00 - 19:00</p>
                 </div>
               </div>
-              <div class="contacts-block__map" id="map"></div>
+              <div class="contacts-block__map">
+                <div class="contacts-block__nav">
+                  <span class="contacts-block__btn" data-point="Санкт-Петербург метро Чернышевская"><i class="icon-metro"></i> Метро 1</span>
+                  <span class="contacts-block__btn" data-point="Санкт-Петербург метро Гостиный двор"><i class="icon-metro"></i> Метро 2</span>
+                  <span class="contacts-block__btn"><i class="icon-camera"></i> Фото входа</span>
+                </div>
+                <div class="contacts-block__ymaps" id="map"></div>
+                <!-- 
+                  Слой с фотографией входа. Может быть есть возможность подтягивать через api яндекс-карт, но я туповат для этого.
+                  Опять же, дать возможность владельцу сайта самому ставить фотку вроде бы правильно. 
+                -->
+                <div class="contacts-block__layout" style="background-image:url(img/door.jpg);"></div>
+              </div>
             </div>
             <div class="message-block">
               <h2 class="message-block__title">Оставить сообщение</h2>

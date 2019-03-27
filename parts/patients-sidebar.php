@@ -5,6 +5,7 @@
     <li><a href="blog.php"><i class="icon-docs menu__icon menu__icon_shown"></i> Статьи</a></li>
     <li><a href="schedule.php"><i class="icon-calendar menu__icon menu__icon_shown"></i> Расписание</a></li>
     <li><a href="rules.php"><i class="icon-brackets menu__icon menu__icon_shown"></i> Правила внутреннего распорядка</a></li>
+    <li><a href="tax-deduction.php"><i class="icon-percent menu__icon menu__icon_shown"></i> Налоговый вычет</a></li>
   </ul>
 </aside>
 <script>

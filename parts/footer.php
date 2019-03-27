@@ -45,29 +45,68 @@
       </div>
     </div>
 	</footer>
+  <!-- Мобильные контакты -->
+  <div class="contacts-panel">
+    <div class="wrapper">
+      <div class="contacts-panel__nav">
+        <button class="contacts-panel__btn"><i class="icon-home"></i> Адрес</button>
+        <button class="contacts-panel__btn"><i class="icon-phone"></i> Телефон</button>
+        <button class="contacts-panel__btn"><i class="fa-share-alt"></i> Соцсети</button>
+      </div>
+      <div class="contacts-panel__item">
+        <div class="contacts-panel__inner">
+          <span class="contacts-panel__back">Назад</span>
+          <div class="contacts-panel__content">г. Санкт-Петербург, ул. Гагаринская 30</div>
+        </div>        
+      </div>
+      <div class="contacts-panel__item">
+        <div class="contacts-panel__inner">
+          <span class="contacts-panel__back">Назад</span>
+          <div class="contacts-panel__content">
+            <a href="tel:78122722125">+7 (812) 272-21-25</a>
+            <a href="rel:78122722125">+7 (812) 272-21-25</a>
+          </div>
+        </div>        
+      </div>
+      <div class="contacts-panel__item">
+        <div class="contacts-panel__inner">
+          <span class="contacts-panel__back">Назад</span>
+          <div class="contacts-panel__content">
+            <div class="contacts-panel__social">
+              <a href="#" class="fa-instagram"></a>
+              <a href="#" class="fa-facebook"></a>
+              <a href="#" class="fa-vk"></a>
+              <a href="#">WhatsApp</a>
+              <a href="#">Viber</a>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
   <!-- модальные окна -->
   <div class="modal" id="review-form">
     <span class="modal__close">✕</span>
-    <form action="#/" class="review-form">
-      <div class="review-form__step">
-        <label class="review-form__field">
-          <span class="review-form__label">ВАШ ОТЗЫВ</span>
-          <textarea class="review-form__input" rows="8" required></textarea>
+    <form action="#/" class="step-form">
+      <div class="step-form__step">
+        <label class="step-form__field">
+          <span class="step-form__label">ВАШ ОТЗЫВ</span>
+          <textarea class="step-form__input" rows="8" required></textarea>
         </label>
-        <a href="#" class="btn btn_small btn_gray review-form__next">Далее →</a>
+        <a href="#" class="btn btn_small btn_gray step-form__next">Далее →</a>
       </div>
-      <div class="review-form__step">
-        <div class="box review-form__box">
-          <label class="review-form__field review-form__field_half">
-            <span class="review-form__label">ВАШЕ ИМЯ</span>
+      <div class="step-form__step">
+        <div class="box step-form__box">
+          <label class="step-form__field step-form__field_half">
+            <span class="step-form__label">ВАШЕ ИМЯ</span>
             <input type="text" required />
           </label>
-          <label class="review-form__field review-form__field_half">
-            <span class="review-form__label">ВАШ EMAIL</span>
+          <label class="step-form__field step-form__field_half">
+            <span class="step-form__label">ВАШ EMAIL</span>
             <input type="email" required />
           </label>
-          <label class="review-form__field review-form__field_half">
-            <span class="review-form__label">УСЛУГА</span>
+          <label class="step-form__field step-form__field_half">
+            <span class="step-form__label">УСЛУГА</span>
             <select>
               <option>Лечение зубов</option>
               <option>Отбеливание зубов</option>
@@ -79,8 +118,8 @@
               <option>Протезирование</option>
             </select>
           </label>
-          <label class="review-form__field review-form__field_half">
-            <span class="review-form__label">ВРАЧ</span>
+          <label class="step-form__field step-form__field_half">
+            <span class="step-form__label">ВРАЧ</span>
             <select>
               <option>Амириди Дмитрий</option> 
               <option>Кусевицкий Леонид</option> 
@@ -93,16 +132,79 @@
             </select>
           </label>
         </div>
-        <button class="btn review-form__next">Оставить отзыв</button>
+        <button class="btn step-form__next">Оставить отзыв</button>
       </div>
-      <div class="review-form__step review-form__step_center">
+      <div class="step-form__step step-form__step_center">
         <!-- заглушка под капчу. Нахрен здесь вообще recaptcha2? -->
         <img src="img/captcha.jpg" class="g-recaptcha" alt="">
       </div>
-      <div class="review-form__step review-form__step_final">
-        <div class="review-form__text">
-          <h2 class="review-form__title">Отлично!</h2>
+      <div class="step-form__step step-form__step_final">
+        <div class="step-form__text">
+          <h2 class="step-form__title">Отлично!</h2>
           <p>Осталось пройти модерацию <span>👨‍💻</span> <span>👩‍💻</span> и Ваш отзыв будет добавлен на сайт</p>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal" id="faq-form">
+    <span class="modal__close">✕</span>
+    <form action="#/" class="step-form">
+      <div class="step-form__step">
+        <label class="step-form__field">
+          <span class="step-form__label">ВАШ Вопрос</span>
+          <textarea class="step-form__input" rows="8" required></textarea>
+        </label>
+        <a href="#" class="btn btn_small btn_gray step-form__next">Далее →</a>
+      </div>
+      <div class="step-form__step">
+        <div class="box step-form__box">
+          <label class="step-form__field step-form__field_half">
+            <span class="step-form__label">ВАШЕ ИМЯ</span>
+            <input type="text" required />
+          </label>
+          <label class="step-form__field step-form__field_half">
+            <span class="step-form__label">ВАШ EMAIL</span>
+            <input type="email" required />
+          </label>
+          <label class="step-form__field step-form__field_half">
+            <span class="step-form__label">Раздел</span>
+            <select>
+              <option>Раздел не указан</option>
+              <option>Лечение зубов</option>
+              <option>Отбеливание зубов</option>
+              <option>Ортодонтия</option>
+              <option>Имплантация</option>
+              <option>Удаление зубов</option>
+              <option>Эстетическая стоматология</option>
+              <option>Виниры</option>
+              <option>Протезирование</option>
+            </select>
+          </label>
+          <label class="step-form__field step-form__field_half">
+            <span class="step-form__label">Адресовать врачу</span>
+            <select>
+              <option>без адресации</option> 
+              <option>Амириди Дмитрий</option> 
+              <option>Кусевицкий Леонид</option> 
+              <option>Маканина Лина</option> 
+              <option>Амириди Марина</option> 
+              <option>Лисицына Асия</option> 
+              <option>Ковалев Елисей</option> 
+              <option>Алешкова Татьяна</option> 
+              <option>Окунев Павел</option>
+            </select>
+          </label>
+        </div>
+        <button class="btn step-form__next">Задать вопрос</button>
+      </div>
+      <div class="step-form__step step-form__step_center">
+        <!-- заглушка под капчу. Нахрен здесь вообще recaptcha2? -->
+        <img src="img/captcha.jpg" class="g-recaptcha" alt="">
+      </div>
+      <div class="step-form__step step-form__step_final">
+        <div class="step-form__text">
+          <h2 class="step-form__title">Отлично!</h2>
+          <p>Осталось пройти модерацию <span>👨‍💻</span> <span>👩‍💻</span> и на Ваш вопрос обязательно ответят</p>
         </div>
       </div>
     </form>

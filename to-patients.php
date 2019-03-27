@@ -41,7 +41,14 @@
                     <h3 class="category-card__title">Правила внутреннего распорядка</h3>
                   </div>
                   <i class="icon-brackets category-card__icon"></i>
-                </div>                
+                </div>
+                <div class="category-card">
+                  <a href="tax-deduction.php" class="category-card__link"></a>
+                  <div class="category-card__text">
+                    <h3 class="category-card__title">Налоговый вычет</h3>
+                  </div>
+                  <i class="icon-percent category-card__icon"></i>
+                </div>
               </div>
             </div>
           </div>
