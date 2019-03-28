@@ -40,6 +40,7 @@
           </a>
           <a href="/" class="header__icon">
             <img src="img/small-logo.svg" alt="">
+            <img src="img/text-logo.svg" alt="">
           </a>
           <span class="header__menu-btn"></span>
           <div class="header__worktime">

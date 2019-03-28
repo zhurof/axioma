@@ -14,8 +14,10 @@
                 <!--
                   По дизайну, если в списке внутри карточки больше 4 пунктов, показывается 3 пункта и пункт со ссылкой "Ещё". А при наведении на карточку, она становится полной, при этом не изменяя своих размеров и не двигая соседей. 
                   Я не смог придумать ничего лучше, чем задублировать контент карточки, если пунктов больше 4.
+                  P.S Херню типа ссылка в ссылке придумал дизугнер, я тут ни при чём.
                 -->
                 <div class="category-card">
+                  <a href="service.php" class="category-card__link"></a>
                   <div class="category-card__text">
                     <h3 class="category-card__title">Лечение зубов</h3>
                     <ul class="category-card__list">
@@ -28,6 +30,7 @@
                   <i class="icon-treatment category-card__icon"></i>
                 </div>
                 <div class="category-card">
+                  <a href="service.php" class="category-card__link"></a>
                   <div class="category-card__text">
                     <h3 class="category-card__title">Отбеливание зубов</h3>
                     <ul class="category-card__list">
@@ -38,6 +41,7 @@
                   <i class="icon-whitening category-card__icon"></i>
                 </div>
                 <div class="category-card">
+                  <a href="service.php" class="category-card__link"></a>
                   <div class="category-card__text">
                     <h3 class="category-card__title">Ортодонтия</h3>
                     <ul class="category-card__list">
@@ -49,6 +53,7 @@
                   <i class="icon-orthodontics category-card__icon"></i>
                 </div>
                 <div class="category-card category-card_dropdown">
+                  <a href="service.php" class="category-card__link"></a>
                   <div class="category-card__text">
                     <h3 class="category-card__title">Имплантация</h3>
                     <ul class="category-card__list">
@@ -59,6 +64,7 @@
                     </ul>
                   </div>
                   <div class="category-card__layout">
+                    <a href="service.php" class="category-card__link"></a> <!-- Тут также дублировать общую ссылку -->
                     <h3 class="category-card__title">Имплантация</h3>
                     <ul class="category-card__list">
                       <li><a href="service.php">Имплантация Straumann</a></li>
@@ -72,6 +78,7 @@
                   <i class="icon-implantation category-card__icon"></i>
                 </div>
                 <div class="category-card">
+                  <a href="service.php" class="category-card__link"></a>
                   <div class="category-card__text">
                     <h3 class="category-card__title">Удаление зубов</h3>
                     <ul class="category-card__list">
@@ -82,7 +89,6 @@
                   <i class="icon-extraction category-card__icon"></i>
                 </div>
                 <div class="category-card">
-                  <!-- По идее, если нет ссылок на услуги, то сама карточка становится ссылкой -->
                   <a href="service.php" class="category-card__link"></a>
                   <div class="category-card__text">                    
                     <h3 class="category-card__title">Эстетическая стоматология</h3>
@@ -90,6 +96,7 @@
                   <i class="icon-estetic category-card__icon"></i>
                 </div>
                 <div class="category-card">
+                  <a href="service.php" class="category-card__link"></a>
                   <div class="category-card__text">
                     <h3 class="category-card__title">Виниры</h3>
                     <ul class="category-card__list">
@@ -101,6 +108,7 @@
                   <i class="icon-vinir category-card__icon"></i>
                 </div>
                 <div class="category-card category-card_dropdown">
+                  <a href="service.php" class="category-card__link"></a>
                   <div class="category-card__text">
                     <h3 class="category-card__title">Протезирование</h3>
                     <ul class="category-card__list">
@@ -111,6 +119,7 @@
                     </ul>
                   </div>
                   <div class="category-card__layout">
+                    <a href="service.php" class="category-card__link"></a>
                     <h3 class="category-card__title">Протезирование</h3>
                     <ul class="category-card__list">
                       <li><a href="service.php">Временные коронки</a></li>

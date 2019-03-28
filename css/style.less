@@ -658,7 +658,7 @@ ol{
   &.fixed &__logo{
     display:none;
   }
-   &__icon{
+  &__icon{
     display:none;
     width:146px;
     height:76px;
@@ -668,6 +668,9 @@ ol{
       height:36px;
       width:auto;
       margin:0 auto;
+      &:nth-child(n+2){
+        display:none;
+      }
     }
   }
   &.fixed &__icon{
@@ -686,7 +689,12 @@ ol{
       content:'\e910';
     }
     &.active{
-      color:@orange;
+      color:#000;
+      font-family:fontAwesome;
+      font-size:20px;
+      &:before{
+        content:'\f00d';        
+      }
     }
   }
   &.fixed &__menu-btn{
@@ -1641,7 +1649,8 @@ ol{
     height:100%;
     background:
       url(../img/btn.svg) no-repeat center/contain,
-      linear-gradient(to right, transparent 13px,#f2f2f4 13px, #f2f2f4 16px,transparent 16px);
+      url(../img/vertical-line.svg) repeat-y center/100% auto;
+      //linear-gradient(to right, transparent 13px,#f2f2f4 13px, #f2f2f4 16px,transparent 16px);
     margin:0;
     transform:translateX(-50%);
     top:0;
@@ -1701,7 +1710,6 @@ ol{
   }
   &__link{
     .pos;
-    z-index:2;
   }
   &__text{
     display:flex;
@@ -1715,15 +1723,15 @@ ol{
       margin:auto 0;
       transform:translateY(-10px); /*нивелируем разный padding сверху и снизу*/
     }
-    a{
-      text-decoration:none;
-    }
   }
   &__list{
     .unlist();
     line-height:1;
-    >li{
-      margin:0 0 .7em;
+    a{
+      display:block;
+      padding:0 0 .7em;
+      position:relative;
+      z-index:2;      
     }
   }
   &__layout{
