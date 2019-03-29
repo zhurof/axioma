@@ -1,12 +1,12 @@
 <aside class="sidebar page__sidebar">
   <ul class="menu sidebar__menu">
-    <li class="has-children open">
+    <li class="has-children">
       <a href="service.php"><i class="icon-treatment menu__icon"></i> Лечение зубов</a>
-      <ul style="display:block;">
-        <li><a href="#">Лечение кариеса</a></li>
-        <li class="active"><a href="#">Реставрация</a></li>
-        <li><a href="#">Профессиональная чистка</a></li>
-        <li><a href="#">Детская стоматология</a></li>
+      <ul>
+        <li><a href="service.php">Лечение кариеса</a></li>
+        <li><a href="service.php">Реставрация</a></li>
+        <li><a href="service.php">Профессиональная чистка</a></li>
+        <li><a href="service.php">Детская стоматология</a></li>
       </ul>
     </li>
     <li class="has-children">                

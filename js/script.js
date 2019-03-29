@@ -356,3 +356,11 @@ function toggleContactsPanel(){
     $('.contacts-panel.hidden').removeClass('hidden');
   }
 }
+//прокрутка экрана на страницах кроме главной
+if(location.pathname != '/' && !is_mobile()){
+  setTimeout(function(){
+    $('html, body').animate({
+      scrollTop: 230
+    }, 400);
+  },300)  
+}
