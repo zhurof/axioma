@@ -360,7 +360,7 @@ function toggleContactsPanel(){
 if(location.pathname != '/' && !is_mobile()){
   setTimeout(function(){
     $('html, body').animate({
-      scrollTop: 230
+      scrollTop: $('.header').outerHeight()/3*2
     }, 400);
   },300)  
 }
